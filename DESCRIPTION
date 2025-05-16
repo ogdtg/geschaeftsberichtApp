@@ -1,0 +1,40 @@
+Package: geschaeftsberichtApp
+Title: PKG_TITLE
+Version: 0.0.0.9000
+Authors@R: 
+    person("Felix", "Lorenz", , "felix.lorenz@tg.ch", role = c("cre", "aut"))
+Description: Der statistische Anhang des Geschäftsberichts des Kantons
+    Thurgau in digitalisierter Form mit der Möglichkeit Daten
+    herunterzuladen und gesamte Zeitreihen einzusehen.
+License: MIT + file LICENSE
+Imports: 
+    bs4Dash,
+    config (>= 0.3.2),
+    dplyr,
+    flextable,
+    golem (>= 0.4.1),
+    Hmisc,
+    openxlsx,
+    purrr,
+    rlang,
+    shiny (>= 1.8.0),
+    shinybrowser,
+    shinyjs,
+    stringr,
+    TGexcel,
+    tidyr,
+    tools,
+    waiter,
+    writexl,
+    zoo
+Suggests: 
+    knitr,
+    rmarkdown,
+    spelling,
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
+Encoding: UTF-8
+Language: en-US
+LazyData: true
+RoxygenNote: 7.3.1
+VignetteBuilder: knitr
