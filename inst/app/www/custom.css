@@ -54,9 +54,11 @@ a {
 }
 /* content */
 .skin-blue .content-wrapper {
-  padding-top: 90px;
   background-color: #ffffff;
 }
+
+
+
 
 /* active selected tab in the sidebarmenu */
 .skin-blue .main-sidebar .sidebar .sidebar-menu .active a{
@@ -278,4 +280,10 @@ container{
     background-color: transparent !important;
     border-color: white !important;
 
+}
+
+
+/* Add higher specificity and !important */
+body .content-wrapper {
+  margin-top: 30px !important;
 }

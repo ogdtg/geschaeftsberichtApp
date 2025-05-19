@@ -10,9 +10,14 @@ app_ui <- function(request) {
     bs4Dash::dashboardPage(
       title = "Geschäftsbericht",
       header = init_header("Geschäftsbericht", reference = 'https://statistik.tg.ch'),
-      sidebar = dashboardSidebar(mod_sidebar_ui("sidebar_1")),
+      sidebar = dashboardSidebar(mod_sidebar_ui("sidebar_1"),      minified = F),
       body = dashboardBody(
         shinyjs::useShinyjs(),
+        tags$style(HTML(".wrapper .content-wrapper {
+        margin-top: 30px !important;
+        }
+
+        ")),
         mod_tableview_ui("tableview_1")
       )
     )

@@ -10,9 +10,9 @@
 mod_tableview_ui <- function(id){
   ns <- NS(id)
   tagList(
-    bs4Dash::tabBox(
+    tabBox(
       title = "Datenansicht", width = 12,
-      bs4Dash::tabPanel(
+      tabPanel(
         title = "Tabelle",
         div(
           style = "overflow-x: auto; overflow-y: auto; max-height: 500px;",
@@ -21,7 +21,7 @@ mod_tableview_ui <- function(id){
       ),
       tabPanel(
         title = "Gesamte Zeitreihe",
-        dataTableOutput(ns("table_out"))
+        DT::DTOutput(ns("table_out"))
       )
     )
   )
@@ -39,8 +39,14 @@ mod_tableview_server <- function(id, input_values, nested_data) {
       nested_data()[[input_values$dept()]][[input_values$amt()]][[input_values$table()]]
     })
 
-    output$table_out <- renderDataTable({
-      datatable(
+    flextable_content <- reactive({
+      req(input_values$dept(), input_values$amt(), input_values$table(),input_values$year(),selected_table())
+      produce_flextable2(elem=selected_table(),year = input_values$year())
+
+    })
+
+    output$table_out <- DT::renderDT({
+      DT::datatable(
         selected_table()[["data"]],
         options = list(scrollX = TRUE, scrollY = "500px", dom = 't', paging = FALSE)
       )
@@ -48,8 +54,10 @@ mod_tableview_server <- function(id, input_values, nested_data) {
 
     output$flextable_out <- renderUI({
       req(input_values$year())
-      produce_flextable2(selected_table(), input_values$year())$ft %>% htmltools_value()
+      flextable_content()$ft %>%
+        htmltools_value()
     })
+
 
     output[[input_values$download_id]] <- downloadHandler(
       filename = function() {

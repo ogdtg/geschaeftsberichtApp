@@ -43,6 +43,29 @@ mod_sidebar_server <- function(id, nested_data) {
     })
 
     observe({
+
+      query <- parseQueryString(session$clientData$url_search)
+
+      dept_choices <- names(nested_data_ogd)
+      updateSelectizeInput(session, "dept", choices = dept_choices, selected = query$dept, server = TRUE)
+
+      if (!is.null(query$dept) && query$dept %in% dept_choices) {
+        amt_choices <- names(nested_data_ogd[[query$dept]])
+        updateSelectizeInput(session, "amt", choices = amt_choices, selected = query$amt, server = TRUE)
+
+        if (!is.null(query$amt) && query$amt %in% amt_choices) {
+          table_choices <- names(nested_data_ogd[[query$dept]][[query$amt]])
+          updateSelectizeInput(session, "table", choices = table_choices, selected = query$table, server = TRUE)
+
+          if (!is.null(query$table) && query$table %in% table_choices) {
+            year_choices <- unique(nested_data_ogd[[query$dept]][[query$amt]][[query$table]][["data"]][["jahr"]])
+            updateSelectizeInput(session, "year", choices = year_choices, selected = query$year, server = TRUE)
+          }
+        }
+      }
+    })
+
+    observe({
       updateSelectizeInput(session, "dept", choices = names(nested_data()))
     })
 
@@ -69,6 +92,21 @@ mod_sidebar_server <- function(id, nested_data) {
       updateSelectizeInput(session, "year", choices = valid_years, selected = selected_year)
       query_vals$year <- NULL
     }, ignoreInit = TRUE)
+
+    observe({
+      req(input$dept, input$amt, input$table,input$year)
+
+      url_query <- paste0(
+        # "?ogd=", URLencode(input$ogd),
+        "?dept=", URLencode(input$dept),
+        "&amt=", URLencode(input$amt),
+        "&table=", URLencode(input$table),
+        "&year=", URLencode(input$year)
+        # if (input$ogd == "Normal") paste0("&year=", URLencode(input$year)) else ""
+      )
+
+      runjs(sprintf("history.replaceState(null, '', '%s')", url_query))
+    })
 
     # Return values to pass to other modules
     return(
