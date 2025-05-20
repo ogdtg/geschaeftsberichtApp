@@ -10,18 +10,27 @@
 mod_tableview_ui <- function(id){
   ns <- NS(id)
   tagList(
+    uiOutput(ns("title_div")),
     tabBox(
-      title = "Datenansicht", width = 12,
+      title = NULL, width = 12,collapsible = F,
+      # uiOutput(ns("title_div")),
       tabPanel(
         title = "Tabelle",
         div(
           style = "overflow-x: auto; overflow-y: auto; max-height: 500px;",
-          uiOutput(ns("flextable_out"))
+          uiOutput(ns("flextable_out")),
+          downloadButton(ns("download_table"), "Download"),
+
         )
       ),
       tabPanel(
         title = "Gesamte Zeitreihe",
-        DT::DTOutput(ns("table_out"))
+        DT::DTOutput(ns("table_out")),
+        downloadButton(ns("download_timeseries_csv"), "CSV"),
+        downloadButton(ns("download_timeseries_excel"), "Excel"),
+        downloadButton(ns("download_timeseries_json"), "JSON")
+
+
       )
     )
   )
@@ -67,6 +76,16 @@ mod_tableview_server <- function(id, input_values, nested_data) {
         writexl::write_xlsx(list(Sheet1 = produce_flextable2(selected_table(), input_values$year())$data), path = file)
       }
     )
+
+    output$title_div <-      renderUI({
+      div(
+        style = "margin-bottom: 10px;",
+        p(style = "font-size: 0.9em; margin: 0;", input_values$dep()),
+        p(style = "font-size: 0.9em; margin: 0;", input_values$amt()),
+        p(style = "font-size: 1.2em; font-weight: bold; margin-top: 5px;", paste0(input_values$table(), " (", input_values$year(), ")"))
+      )
+    })
+
   })
 }
 

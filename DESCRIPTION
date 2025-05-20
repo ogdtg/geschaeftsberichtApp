@@ -7,6 +7,7 @@ Description: Der statistische Anhang des Geschäftsberichts des Kantons
     Thurgau in digitalisierter Form mit der Möglichkeit Daten
     herunterzuladen und gesamte Zeitreihen einzusehen.
 License: MIT + file LICENSE
+Remotes: ogdtg/TGexcel
 Imports: 
     bs4Dash,
     config (>= 0.3.2),

@@ -21,8 +21,14 @@ h3, h2 {
         font-weight: bold;
       }
 
+
+.skin-blue .nav-pills .nav-link.active,.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: red !important
+}
+
 a {
-    color: #367d32;
+    color: #367d32 !important;
 }
 
 .skin-blue .main-header {
@@ -286,4 +292,18 @@ container{
 /* Add higher specificity and !important */
 body .content-wrapper {
   margin-top: 30px !important;
+}
+
+
+/* Color for inactive tabs */
+.nav-pills .nav-link {
+  background-color: #f8f9fa;
+  color: #444;
+}
+
+/* Color for the active tab */
+li.nav-item {
+  background-color: red !important; /* change this to your desired color */
+  color: white !important;
+  border-radius: 0.25rem;
 }

@@ -16,6 +16,19 @@ app_ui <- function(request) {
         tags$style(HTML(".wrapper .content-wrapper {
         margin-top: 30px !important;
         }
+/* Active tab */
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  color: #fff !important;
+  background-color: #367d32 !important;
+}
+
+/* Hover only on non-active tabs */
+.nav-pills .nav-link:not(.active):hover {
+  color: #367d32 !important;
+}
+
+
 
         ")),
         mod_tableview_ui("tableview_1")
@@ -45,5 +58,7 @@ golem_add_external_resources <- function() {
     )
     # Add here other external resources
     # for example, you can add shinyalert::useShinyalert()
+    # Add your custom CSS link here
+    # tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
   )
 }
