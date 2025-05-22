@@ -28,7 +28,7 @@ dummy_data <- reactive({
           total_col = NULL,
           turn_header = NULL,
           inner_border = NULL,
-          data = tibble::tibble(
+          data = data.frame(
             jahr = c("2024", "2024"),
             fischart_kennzahl = c("Bachforellen", "Bachforellen"),
             fischeinsatz_typ = c("Brütlinge angefüttert", "Brütlinge angefüttert"),
