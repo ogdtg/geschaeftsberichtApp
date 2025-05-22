@@ -1,30 +1,24 @@
----
-output: github_document
----
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-",
-  out.width = "100%"
-)
-```
 
 # geschaeftsberichtApp
 
 <!-- badges: start -->
-[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
+
+[![Lifecycle:
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 [![R-CMD-check](https://github.com/ogdtg/geschaeftsberichtApp/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/ogdtg/geschaeftsberichtApp/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The `geschaeftsberichtApp` package powers the interactive dashboard accompanying the *Statistischer Anhang* of the **Geschäftsbericht des Kantons Thurgau**. It provides a dynamic, filterable, and downloadable interface for exploring official statistical tables.
+The `geschaeftsberichtApp` package powers the interactive dashboard
+accompanying the *Statistischer Anhang* of the **Geschäftsbericht des
+Kantons Thurgau**. It provides a dynamic, filterable, and downloadable
+interface for exploring official statistical tables.
 
 ## ✨ Features
 
-- View all tables published in the printed *Geschäftsbericht* in a modern interactive dashboard
+- View all tables published in the printed *Geschäftsbericht* in a
+  modern interactive dashboard
 - Link directly from the printed table to its digital counterpart
 - Render tables with grouped headers using `flextable`
 - Download individual tables as Excel files
@@ -37,4 +31,3 @@ You can install the development version of geschaeftsberichtApp like so:
 ``` r
 devtools::install_github("ogdtg/geschaeftsberichtApp")
 ```
-

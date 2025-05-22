@@ -11,7 +11,7 @@ mod_sidebar_ui <- function(id){
   ns <- NS(id)
   tagList(
     selectizeInput(ns("dept"), "Departement", choices = NULL, selected = NULL,
-                   options = list(placeholder = 'Departement wählen', allowEmptyOption = TRUE)),
+                   options = list(placeholder = 'Departement w\u00E4hlen', allowEmptyOption = TRUE)),
     selectizeInput(ns("amt"), "Amt", choices = NULL),
     selectizeInput(ns("table"), "Tabelle", choices = NULL),
     selectizeInput(ns("year"), "Jahr", choices = NULL),

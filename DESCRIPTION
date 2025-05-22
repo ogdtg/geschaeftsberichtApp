@@ -1,5 +1,5 @@
 Package: geschaeftsberichtApp
-Title: PKG_TITLE
+Title: geschaeftsberichtApp
 Version: 0.0.0.9000
 Authors@R: 
     person("Felix", "Lorenz", , "felix.lorenz@tg.ch", role = c("cre", "aut"))
@@ -16,6 +16,7 @@ Imports:
     flextable,
     golem (>= 0.4.1),
     Hmisc,
+    magrittr,
     openxlsx,
     purrr,
     rlang,
@@ -40,7 +41,7 @@ Language: en-US
 LazyData: true
 RoxygenNote: 7.3.1
 VignetteBuilder: knitr
-URL: https://github.com/FLorenz/geschaeftsberichtApp
-BugReports: https://github.com/FLorenz/geschaeftsberichtApp/issues
+URL: https://github.com/ogdtg/geschaeftsberichtApp
+BugReports: https://github.com/ogdtg/geschaeftsberichtApp/issues
 Depends: 
     R (>= 2.10)

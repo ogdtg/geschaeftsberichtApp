@@ -5,7 +5,7 @@ account: statistiktg
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14781247
-bundleId: 10306256
+bundleId: 10313069
 url: https://statistiktg.shinyapps.io/statanhang/
 version: 1
 asMultiple: FALSE

@@ -1,12 +1,17 @@
-#' tableview UI Function
+#' Table View UI Module
 #'
-#' @description A shiny Module.
+#' Constructs the user interface for the table viewing module, including a tabbed layout
+#' for displaying both a formatted table (`flextable`) and a raw data table (via DT).
 #'
-#' @param id,input,output,session Internal parameters for {shiny}.
+#' @param id A unique identifier for the module namespace.
 #'
-#' @noRd
+#' @return A UI definition (`tagList`) for use in a Shiny app.
 #'
-#' @importFrom shiny NS tagList
+#' @importFrom shiny NS tagList uiOutput downloadButton
+#' @importFrom bs4Dash tabBox
+#' @importFrom shiny tabPanel
+#' @importFrom DT DTOutput
+#' @export
 mod_tableview_ui <- function(id){
   ns <- NS(id)
   tagList(
@@ -36,9 +41,23 @@ mod_tableview_ui <- function(id){
   )
 }
 
-#' tableview Server Functions
+#' Table View Server Module
 #'
-#' @noRd
+#' Manages server-side logic for the table viewing module. It handles:
+#' - Selection and rendering of a specific dataset from nested input
+#' - Rendering of a `flextable` and a `DT` table
+#' - Download functionality for the dataset in multiple formats
+#'
+#' @param id A unique identifier for the module namespace.
+#' @param input_values A reactive list of user inputs required to fetch and display data
+#'   (`dept`, `amt`, `table`, `year`, `download_id`).
+#' @param nested_data A reactive object representing a nested list structure of data.
+#'
+#' @importFrom shiny moduleServer reactive renderUI req
+#' @importFrom writexl write_xlsx
+#' @importFrom DT renderDT datatable
+#' @importFrom flextable htmltools_value
+#' @export
 mod_tableview_server <- function(id, input_values, nested_data) {
   moduleServer(id, function(input, output, session) {
     ns <- session$ns
@@ -73,7 +92,7 @@ mod_tableview_server <- function(id, input_values, nested_data) {
         paste0(gsub(" ", "_", input_values$table()), "_", input_values$year(), ".xlsx")
       },
       content = function(file) {
-        writexl::write_xlsx(list(Sheet1 = produce_flextable2(selected_table(), input_values$year())$data), path = file)
+        writexl::write_xlsx(list(Sheet1 = flextable_content()$data), path = file)
       }
     )
 
