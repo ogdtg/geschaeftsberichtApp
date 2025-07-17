@@ -1,0 +1,118 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# Personalwesen
+
+## Personalwesen
+
+### Personalbestand
+
+```{r 0pw1, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Personalwesen"]][["Personalwesen"]][["Personalbestand"]], year = "2024")
+ft_df$ft
+```
+
+```{r 0pw1_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Personalbestand&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Personalbestand&year=2024) |
+|:--:|
+
+\
+
+
+### Anteil Frauen / Männer
+
+```{r 0pw2, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Personalwesen"]][["Personalwesen"]][["Anteil Frauen / Männer"]], year = "2024")
+ft_df$ft
+```
+
+```{r 0pw2_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Anteil%20Frauen%20/%20M%C3%A4nner&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Anteil%20Frauen%20/%20M%C3%A4nner&year=2024) |
+|:--:|
+
+\
+
+
+### Fluktuationsrate
+
+```{r 0pw3, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Personalwesen"]][["Personalwesen"]][["Fluktuationsrate"]], year = "2024")
+ft_df$ft
+```
+
+```{r 0pw3_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Fluktuationsrate&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Fluktuationsrate&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Altersstruktur
+
+```{r 0pw4, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Personalwesen"]][["Personalwesen"]][["Altersstruktur"]], year = "2024")
+ft_df$ft
+```
+
+```{r 0pw4_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Altersstruktur&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Altersstruktur&year=2024) |
+|:--:|
+
+\
+
+
+### Vollzeit-/Teilzeitbeschäftigte
+
+```{r 0pw5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Personalwesen"]][["Personalwesen"]][["Vollzeit-/Teilzeitbeschäftigte"]], year = "2024")
+ft_df$ft
+```
+
+```{r 0pw5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Vollzeit-/Teilzeitbesch%C3%A4ftigte&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Personalwesen&amt=Personalwesen&table=Vollzeit-/Teilzeitbesch%C3%A4ftigte&year=2024) |
+|:--:|
+
+\
+

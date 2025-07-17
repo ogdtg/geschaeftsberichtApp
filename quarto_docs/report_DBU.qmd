@@ -1,0 +1,364 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 6&emsp;DBU
+
+## 6010&emsp;Generalsekretariat DBU
+
+### Verwaltungsrechtspflege
+
+```{r 660101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Generalsekretariat DBU"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 660101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\
+
+
+### Bearbeitungszeit netto der Hauptzirkulation Baugesuche «Baugesuche innerhalb Bauzonen» in Arbeitstagen (AT)
+
+```{r 660102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Generalsekretariat DBU"]][["Bearbeitungszeit netto der Hauptzirkulation Baugesuche «Baugesuche innerhalb Bauzonen» in Arbeitstagen (AT)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 660102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Bearbeitungszeit%20netto%20der%20Hauptzirkulation%20Baugesuche%20%C2%ABBaugesuche%20innerhalb%20Bauzonen%C2%BB%20in%20Arbeitstagen%20(AT)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Bearbeitungszeit%20netto%20der%20Hauptzirkulation%20Baugesuche%20%C2%ABBaugesuche%20innerhalb%20Bauzonen%C2%BB%20in%20Arbeitstagen%20(AT)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Bearbeitungszeit netto der Hauptzirkulation Baugesuche «Baugesuche ausserhalb Bauzonen» in Arbeitstagen (AT)
+
+```{r 660103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Generalsekretariat DBU"]][["Bearbeitungszeit netto der Hauptzirkulation Baugesuche «Baugesuche ausserhalb Bauzonen» in Arbeitstagen (AT)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 660103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Bearbeitungszeit%20netto%20der%20Hauptzirkulation%20Baugesuche%20%C2%ABBaugesuche%20ausserhalb%20Bauzonen%C2%BB%20in%20Arbeitstagen%20(AT)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Generalsekretariat%20DBU&table=Bearbeitungszeit%20netto%20der%20Hauptzirkulation%20Baugesuche%20%C2%ABBaugesuche%20ausserhalb%20Bauzonen%C2%BB%20in%20Arbeitstagen%20(AT)&year=2024) |
+|:--:|
+
+\
+
+
+## 6210&emsp;Hochbauamt
+
+### Anzahl der Beratungen, Expertisen, Stellungnahmen
+
+```{r 662101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Hochbauamt"]][["Anzahl der Beratungen, Expertisen, Stellungnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 662101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Anzahl%20der%20Beratungen,%20Expertisen,%20Stellungnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Anzahl%20der%20Beratungen,%20Expertisen,%20Stellungnahmen&year=2024) |
+|:--:|
+
+\
+
+
+### Nettoausgaben für Hochbauten
+
+```{r 662102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Hochbauamt"]][["Nettoausgaben für Hochbauten"]], year = "2024")
+ft_df$ft
+```
+
+```{r 662102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Nettoausgaben%20f%C3%BCr%20Hochbauten&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Nettoausgaben%20f%C3%BCr%20Hochbauten&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Projekte der Investitionsrechnung nach Anlage- und Gebäudekosten in Fr
+
+```{r 662103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Hochbauamt"]][["Projekte der Investitionsrechnung nach Anlage- und Gebäudekosten in Fr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 662103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Projekte%20der%20Investitionsrechnung%20nach%20Anlage-%20und%20Geb%C3%A4udekosten%20in%20Fr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Projekte%20der%20Investitionsrechnung%20nach%20Anlage-%20und%20Geb%C3%A4udekosten%20in%20Fr&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Investitionsrechnung
+
+```{r 662104, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Hochbauamt"]][["Investitionsrechnung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 662104_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Investitionsrechnung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Hochbauamt&table=Investitionsrechnung&year=2024) |
+|:--:|
+
+\
+
+
+## 6310&emsp;Tiefbauamt
+
+### Kantonsstrassen Korrektionen (6340)
+
+```{r 663101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Kantonsstrassen Korrektionen (6340)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Kantonsstrassen%20Korrektionen%20(6340)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Kantonsstrassen%20Korrektionen%20(6340)&year=2024) |
+|:--:|
+
+\
+
+
+### Wegverlegungen (grössere Signalisationsarbeiten)
+
+```{r 6631010, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Wegverlegungen (grössere Signalisationsarbeiten)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 6631010_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Wegverlegungen%20(gr%C3%B6ssere%20Signalisationsarbeiten)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Wegverlegungen%20(gr%C3%B6ssere%20Signalisationsarbeiten)&year=2024) |
+|:--:|
+
+\
+
+
+### Total Kantonale Wanderwege
+
+```{r 6631011, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Total Kantonale Wanderwege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 6631011_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Total%20Kantonale%20Wanderwege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Total%20Kantonale%20Wanderwege&year=2024) |
+|:--:|
+
+\
+
+
+### Belagssanierungen (6310)
+
+```{r 663102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Belagssanierungen (6310)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Belagssanierungen%20(6310)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Belagssanierungen%20(6310)&year=2024) |
+|:--:|
+
+\
+
+
+### Oberflächenbehandlungen (6310)
+
+```{r 663103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Oberflächenbehandlungen (6310)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Oberfl%C3%A4chenbehandlungen%20(6310)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Oberfl%C3%A4chenbehandlungen%20(6310)&year=2024) |
+|:--:|
+
+\
+
+
+### Belagssanierungen im Rahmen von Korrektionen (6340, 6370)
+
+```{r 663104, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Belagssanierungen im Rahmen von Korrektionen (6340, 6370)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663104_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Belagssanierungen%20im%20Rahmen%20von%20Korrektionen%20(6340,%206370)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Belagssanierungen%20im%20Rahmen%20von%20Korrektionen%20(6340,%206370)&year=2024) |
+|:--:|
+
+\
+
+
+### Radwege / kombinierte Rad- und Gehwege
+
+```{r 663105, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Radwege / kombinierte Rad- und Gehwege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663105_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Radwege%20/%20kombinierte%20Rad-%20und%20Gehwege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Radwege%20/%20kombinierte%20Rad-%20und%20Gehwege&year=2024) |
+|:--:|
+
+\
+
+
+### Radwanderwege (SchweizMobil-Routen)
+
+```{r 663106, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Radwanderwege (SchweizMobil-Routen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663106_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Radwanderwege%20(SchweizMobil-Routen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Radwanderwege%20(SchweizMobil-Routen)&year=2024) |
+|:--:|
+
+\
+
+
+### Mountainbike-Routen
+
+```{r 663107, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Mountainbike-Routen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663107_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Mountainbike-Routen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Mountainbike-Routen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Inline Skating-Routen
+
+```{r 663108, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Inline Skating-Routen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663108_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Inline%20Skating-Routen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Inline%20Skating-Routen&year=2024) |
+|:--:|
+
+\
+
+
+### Wegneubau
+
+```{r 663109, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Tiefbauamt"]][["Wegneubau"]], year = "2024")
+ft_df$ft
+```
+
+```{r 663109_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Wegneubau&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Tiefbauamt&table=Wegneubau&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 6410&emsp;Amt für Denkmalpflege
+
+### Restaurierungen
+
+```{r 664101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DBU"]][["Amt für Denkmalpflege"]][["Restaurierungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 664101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Amt%20f%C3%BCr%20Denkmalpflege&table=Restaurierungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DBU&amt=Amt%20f%C3%BCr%20Denkmalpflege&table=Restaurierungen&year=2024) |
+|:--:|
+
+\
+
+
+## 6510&emsp;Amt für Umwet

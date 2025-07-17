@@ -31,3 +31,13 @@ You can install the development version of geschaeftsberichtApp like so:
 ``` r
 devtools::install_github("ogdtg/geschaeftsberichtApp")
 ```
+
+## Run the app
+
+After successfull installation, you can run the app by using the
+following code:
+
+``` r
+library(geschaeftsberichtApp)
+geschaeftsberichtApp::run_app()
+```

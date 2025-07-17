@@ -1,0 +1,324 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 1&emsp;Räte
+
+## 1000&emsp;Regierungsrat
+
+### Verwaltungsrechtspflege
+
+```{r 110001, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Regierungsrat"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 110001_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Regierungsrat&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Regierungsrat&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 1100&emsp;Grosser Rat
+
+### Sachgeschäfte des Grossen Rates
+
+```{r 111001, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Sachgeschäfte des Grossen Rates: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111001_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Sachgesch%C3%A4fte%20des%20Grossen%20Rates:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Sachgesch%C3%A4fte%20des%20Grossen%20Rates:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Sachgeschäfte des Grossen Rates
+
+```{r 111001.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Sachgeschäfte des Grossen Rates"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111001.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Sachgesch%C3%A4fte%20des%20Grossen%20Rates&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Sachgesch%C3%A4fte%20des%20Grossen%20Rates&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Parlamentarische Initiativen
+
+```{r 111002, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Parlamentarische Initiativen: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111002_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Parlamentarische%20Initiativen:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Parlamentarische%20Initiativen:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Parlamentarische Initiativen
+
+```{r 111002.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Parlamentarische Initiativen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111002.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Parlamentarische%20Initiativen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Parlamentarische%20Initiativen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Motionen
+
+```{r 111003, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Motionen: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111003_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Motionen:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Motionen:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Motionen
+
+```{r 111003.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Motionen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111003.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Motionen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Motionen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Standesinitiativen
+
+```{r 111004, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Standesinitiativen: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111004_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Standesinitiativen:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Standesinitiativen:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Standesinitiativen
+
+```{r 111004.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Standesinitiativen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111004.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Standesinitiativen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Standesinitiativen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Anträge nach § 52 der Geschäftsordnung des Grossen Rates
+
+```{r 111005, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Anträge nach § 52 der Geschäftsordnung des Grossen Rates: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111005_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Antr%C3%A4ge%20nach%20%C2%A7%2052%20der%20Gesch%C3%A4ftsordnung%20des%20Grossen%20Rates:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Antr%C3%A4ge%20nach%20%C2%A7%2052%20der%20Gesch%C3%A4ftsordnung%20des%20Grossen%20Rates:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Anträge nach § 52 der Geschäftsordnung des Grossen Rates
+
+```{r 111005.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Anträge nach § 52 der Geschäftsordnung des Grossen Rates"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111005.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Antr%C3%A4ge%20nach%20%C2%A7%2052%20der%20Gesch%C3%A4ftsordnung%20des%20Grossen%20Rates&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Antr%C3%A4ge%20nach%20%C2%A7%2052%20der%20Gesch%C3%A4ftsordnung%20des%20Grossen%20Rates&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Interpellationen
+
+```{r 111006, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Interpellationen: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111006_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Interpellationen:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Interpellationen:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Interpellationen
+
+```{r 111006.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Interpellationen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111006.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Interpellationen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Interpellationen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Einfache Anfragen
+
+```{r 111007, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Einfache Anfragen: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111007_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Einfache%20Anfragen:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Einfache%20Anfragen:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Einfache Anfragen
+
+```{r 111007.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Einfache Anfragen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111007.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Einfache%20Anfragen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Einfache%20Anfragen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Petitionen an den Grossen Rat
+
+```{r 111008, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Petitionen an den Grossen Rat: Zusammenfassung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111008_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Petitionen%20an%20den%20Grossen%20Rat:%20Zusammenfassung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Petitionen%20an%20den%20Grossen%20Rat:%20Zusammenfassung&year=2024) |
+|:--:|
+
+\
+
+
+### Petitionen an den Grossen Rat
+
+```{r 111008.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Räte"]][["Grosser Rat"]][["Petitionen an den Grossen Rat"]], year = "2024")
+ft_df$ft
+```
+
+```{r 111008.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Petitionen%20an%20den%20Grossen%20Rat&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=R%C3%A4te&amt=Grosser%20Rat&table=Petitionen%20an%20den%20Grossen%20Rat&year=2024) |
+|:--:|
+
+\newpage
+

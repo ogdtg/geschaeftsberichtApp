@@ -1,12 +1,10 @@
 name: statanhang
-title: statanhang
+title: Geschäftsbericht KVTG
 username: statistiktg
 account: statistiktg
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 14781247
-bundleId: 10313069
+bundleId: 10548840
 url: https://statistiktg.shinyapps.io/statanhang/
 version: 1
-asMultiple: FALSE
-asStatic: FALSE

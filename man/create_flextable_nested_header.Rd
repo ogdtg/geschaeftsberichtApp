@@ -11,16 +11,16 @@ create_flextable_nested_header(
 )
 }
 \arguments{
-\item{template_data}{A data frame with column names using double underscores to indicate nesting (e.g., `"Income__Total"`).}
+\item{template_data}{A data frame with column names using double underscores to indicate nesting}
 
-\item{total_row}{Logical, whether to append a row with column totals.}
+\item{total_row}{Logical, whether to append a row with column totals}
 
-\item{total_col}{Logical, whether to append a column with row totals.}
+\item{total_col}{Logical, whether to append a column with row totals}
 }
 \value{
-A formatted `flextable` object with nested headers and optional totals.
+A formatted flextable object with nested headers and optional totals
 }
 \description{
-Generates a `flextable` object from a data frame where column names represent
+Generates a flextable object from a data frame where column names represent
 nested headers (e.g., "Category__Subcategory").
 }

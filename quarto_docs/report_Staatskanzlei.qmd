@@ -1,0 +1,118 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 2&emsp;Staatskanzlei
+
+## 2000&emsp;Staatskanzlei
+
+### Petitionen
+
+```{r 220002, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Staatskanzlei"]][["Staatskanzlei"]][["Petitionen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 220002_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Petitionen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Petitionen&year=2024) |
+|:--:|
+
+\
+
+
+### Eidgenössische Abstimmungen (Ergebnisse Kanton Thurgau)
+
+```{r 220003, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Staatskanzlei"]][["Staatskanzlei"]][["Eidgenössische Abstimmungen (Ergebnisse Kanton Thurgau)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 220003_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Eidgen%C3%B6ssische%20Abstimmungen%20(Ergebnisse%20Kanton%20Thurgau)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Eidgen%C3%B6ssische%20Abstimmungen%20(Ergebnisse%20Kanton%20Thurgau)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Eidgenössische Wahlen (Ergebnisse Kanton Thurgau)
+
+```{r 220003.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Staatskanzlei"]][["Staatskanzlei"]][["Eidgenössische Wahlen (Ergebnisse Kanton Thurgau)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 220003.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Eidgen%C3%B6ssische%20Wahlen%20(Ergebnisse%20Kanton%20Thurgau)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Eidgen%C3%B6ssische%20Wahlen%20(Ergebnisse%20Kanton%20Thurgau)&year=2024) |
+|:--:|
+
+\
+
+
+### Kantonale Wahlen
+
+```{r 220004, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Staatskanzlei"]][["Staatskanzlei"]][["Kantonale Wahlen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 220004_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Kantonale%20Wahlen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Kantonale%20Wahlen&year=2024) |
+|:--:|
+
+\
+
+
+### Kantonale Abstimmungen
+
+```{r 220005, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["Staatskanzlei"]][["Staatskanzlei"]][["Kantonale Abstimmungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 220005_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Kantonale%20Abstimmungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=Staatskanzlei&amt=Staatskanzlei&table=Kantonale%20Abstimmungen&year=2024) |
+|:--:|
+
+\
+

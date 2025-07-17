@@ -1,0 +1,621 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 3&emsp;DIV
+
+## 3010&emsp;Generalsekretariat DIV
+
+### Verwaltungsrechtspflege
+
+```{r 330101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Generalsekretariat DIV"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 330101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Generalsekretariat%20DIV&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Generalsekretariat%20DIV&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\
+
+
+## 3310&emsp;Amt für Geoinformation
+
+### Nachführung der amtlichen Vermessung
+
+```{r 333101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Geoinformation"]][["Nachführung der amtlichen Vermessung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 333101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Geoinformation&table=Nachf%C3%BChrung%20der%20amtlichen%20Vermessung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Geoinformation&table=Nachf%C3%BChrung%20der%20amtlichen%20Vermessung&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Stand der amtlichen Vermessung
+
+```{r 333102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Geoinformation"]][["Stand der amtlichen Vermessung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 333102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Geoinformation&table=Stand%20der%20amtlichen%20Vermessung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Geoinformation&table=Stand%20der%20amtlichen%20Vermessung&year=2024) |
+|:--:|
+
+\
+
+
+## 3530&emsp;Amt für Wirtschaft und Arbeit
+
+### Gutachten, Bewilligungen und Verfügungen Arbeitsinspektorat
+
+```{r 335301, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Gutachten, Bewilligungen und Verfügungen Arbeitsinspektorat"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335301_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Gutachten,%20Bewilligungen%20und%20Verf%C3%BCgungen%20Arbeitsinspektorat&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Gutachten,%20Bewilligungen%20und%20Verf%C3%BCgungen%20Arbeitsinspektorat&year=2024) |
+|:--:|
+
+\
+
+
+### Projektbeiträge Neue Regionalpolitik (NRP)
+
+```{r 3353010, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Projektbeiträge Neue Regionalpolitik (NRP)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 3353010_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Projektbeitr%C3%A4ge%20Neue%20Regionalpolitik%20(NRP)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Projektbeitr%C3%A4ge%20Neue%20Regionalpolitik%20(NRP)&year=2024) |
+|:--:|
+
+\
+
+
+### Wiedereingliederung von Arbeitslosen und Stellensuchenden
+
+```{r 3353011, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Wiedereingliederung von Arbeitslosen und Stellensuchenden"]], year = "2024")
+ft_df$ft
+```
+
+```{r 3353011_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Wiedereingliederung%20von%20Arbeitslosen%20und%20Stellensuchenden&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Wiedereingliederung%20von%20Arbeitslosen%20und%20Stellensuchenden&year=2024) |
+|:--:|
+
+\
+
+
+### Ausrichtung finanzieller Leistungen
+
+```{r 3353012, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Ausrichtung finanzieller Leistungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 3353012_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ausrichtung%20finanzieller%20Leistungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ausrichtung%20finanzieller%20Leistungen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Zulassung ausländischer Arbeitskräfte, privater Arbeitsvermittlung und Personalverleih
+
+```{r 335302, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Zulassung ausländischer Arbeitskräfte, privater Arbeitsvermittlung und Personalverleih"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335302_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Zulassung%20ausl%C3%A4ndischer%20Arbeitskr%C3%A4fte,%20privater%20Arbeitsvermittlung%20und%20Personalverleih&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Zulassung%20ausl%C3%A4ndischer%20Arbeitskr%C3%A4fte,%20privater%20Arbeitsvermittlung%20und%20Personalverleih&year=2024) |
+|:--:|
+
+\
+
+
+### Eidgenössisches Entsendegesetz (EntsG)
+
+```{r 335303, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Eidgenössisches Entsendegesetz (EntsG)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335303_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Eidgen%C3%B6ssisches%20Entsendegesetz%20(EntsG)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Eidgen%C3%B6ssisches%20Entsendegesetz%20(EntsG)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Flankierende Massnahmen
+
+```{r 335304, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Flankierende Massnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335304_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Flankierende%20Massnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Flankierende%20Massnahmen&year=2024) |
+|:--:|
+
+\
+
+
+### Umsetzung Schwarzarbeitsgesetz (BGSA)
+
+```{r 335305, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Umsetzung Schwarzarbeitsgesetz (BGSA)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335305_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Umsetzung%20Schwarzarbeitsgesetz%20(BGSA)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Umsetzung%20Schwarzarbeitsgesetz%20(BGSA)&year=2024) |
+|:--:|
+
+\
+
+
+### Ansiedlungen nach Bezirken
+
+```{r 335306, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Ansiedlungen nach Bezirken"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335306_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ansiedlungen%20nach%20Bezirken&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ansiedlungen%20nach%20Bezirken&year=2024) |
+|:--:|
+
+\
+
+
+### Ansiedlungen nach Sektoren
+
+```{r 335307, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Ansiedlungen nach Sektoren"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335307_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ansiedlungen%20nach%20Sektoren&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Ansiedlungen%20nach%20Sektoren&year=2024) |
+|:--:|
+
+\
+
+
+### Immobilienservice
+
+```{r 335308, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Immobilienservice"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335308_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Immobilienservice&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Immobilienservice&year=2024) |
+|:--:|
+
+\
+
+
+### Projektbeiträge Regionalförderung § 9a ALG
+
+```{r 335309, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Amt für Wirtschaft und Arbeit"]][["Projektbeiträge Regionalförderung § 9a ALG"]], year = "2024")
+ft_df$ft
+```
+
+```{r 335309_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Projektbeitr%C3%A4ge%20Regionalf%C3%B6rderung%20%C2%A7%209a%20ALG&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Amt%20f%C3%BCr%20Wirtschaft%20und%20Arbeit&table=Projektbeitr%C3%A4ge%20Regionalf%C3%B6rderung%20%C2%A7%209a%20ALG&year=2024) |
+|:--:|
+
+\
+
+
+## 3610&emsp;Landwirtschaftsamt
+
+### Weinwirtschaft
+
+```{r 336101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Weinwirtschaft"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Weinwirtschaft&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Weinwirtschaft&year=2024) |
+|:--:|
+
+\
+
+
+### Anerkennung von landwirtschaftlichen Betrieben und Betriebsformen
+
+```{r 336102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Anerkennung von landwirtschaftlichen Betrieben und Betriebsformen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anerkennung%20von%20landwirtschaftlichen%20Betrieben%20und%20Betriebsformen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anerkennung%20von%20landwirtschaftlichen%20Betrieben%20und%20Betriebsformen&year=2024) |
+|:--:|
+
+\
+
+
+### Anzahl kontrollierte Landwirtschaftsbetriebe bei den öffentlich-rechtlichen Programmen
+
+```{r 336103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Anzahl kontrollierte Landwirtschaftsbetriebe bei den öffentlich-rechtlichen Programmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anzahl%20kontrollierte%20Landwirtschaftsbetriebe%20bei%20den%20%C3%B6ffentlich-rechtlichen%20Programmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anzahl%20kontrollierte%20Landwirtschaftsbetriebe%20bei%20den%20%C3%B6ffentlich-rechtlichen%20Programmen&year=2024) |
+|:--:|
+
+\
+
+
+### Anzahl kontrollierte Landwirtschaftsbetriebe bei den Label-Programmen
+
+```{r 336104, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Anzahl kontrollierte Landwirtschaftsbetriebe bei den Label-Programmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336104_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anzahl%20kontrollierte%20Landwirtschaftsbetriebe%20bei%20den%20Label-Programmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Anzahl%20kontrollierte%20Landwirtschaftsbetriebe%20bei%20den%20Label-Programmen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Strukturverbesserungen: Periodische Wiederinstandstellungen (PWI)
+
+```{r 336105, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Strukturverbesserungen: Periodische Wiederinstandstellungen (PWI)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336105_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Strukturverbesserungen:%20Periodische%20Wiederinstandstellungen%20(PWI)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Strukturverbesserungen:%20Periodische%20Wiederinstandstellungen%20(PWI)&year=2024) |
+|:--:|
+
+\
+
+
+### Strukturverbesserungen: Projekte Regionale Entwicklung (PRE)
+
+```{r 336106, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Strukturverbesserungen: Projekte Regionale Entwicklung (PRE)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336106_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Strukturverbesserungen:%20Projekte%20Regionale%20Entwicklung%20(PRE)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Strukturverbesserungen:%20Projekte%20Regionale%20Entwicklung%20(PRE)&year=2024) |
+|:--:|
+
+\
+
+
+### Landwirtschaftliche Hochbauten im Berggebiet und in der Hügelzone sowie Unterstützung für ökologische Ziele
+
+```{r 336107, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Landwirtschaftliche Hochbauten im Berggebiet und in der Hügelzone sowie Unterstützung für ökologische Ziele"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336107_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Landwirtschaftliche%20Hochbauten%20im%20Berggebiet%20und%20in%20der%20H%C3%BCgelzone%20sowie%20Unterst%C3%BCtzung%20f%C3%BCr%20%C3%B6kologische%20Ziele&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Landwirtschaftliche%20Hochbauten%20im%20Berggebiet%20und%20in%20der%20H%C3%BCgelzone%20sowie%20Unterst%C3%BCtzung%20f%C3%BCr%20%C3%B6kologische%20Ziele&year=2024) |
+|:--:|
+
+\
+
+
+### Unterhaltsregelungen (Flurstrassen und Entwässerungen)
+
+```{r 336108, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Unterhaltsregelungen (Flurstrassen und Entwässerungen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336108_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Unterhaltsregelungen%20(Flurstrassen%20und%20Entw%C3%A4sserungen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Unterhaltsregelungen%20(Flurstrassen%20und%20Entw%C3%A4sserungen)&year=2024) |
+|:--:|
+
+\
+
+
+### Stellungnahmen
+
+```{r 336109, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Landwirtschaftsamt"]][["Stellungnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336109_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Stellungnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Landwirtschaftsamt&table=Stellungnahmen&year=2024) |
+|:--:|
+
+\
+
+
+## 3640&emsp;Bildungs- und Beratungszentrum Arenenberg
+
+### Fachschaft Landwirtschaft
+
+```{r 336401, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Fachschaft Landwirtschaft"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336401_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Fachschaft%20Landwirtschaft&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Fachschaft%20Landwirtschaft&year=2024) |
+|:--:|
+
+\
+
+
+### Fachschaft Musikinstrumentenbau
+
+```{r 336402, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Fachschaft Musikinstrumentenbau"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336402_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Fachschaft%20Musikinstrumentenbau&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Fachschaft%20Musikinstrumentenbau&year=2024) |
+|:--:|
+
+\
+
+
+### Modulare Weiterbildung Ernährung und Hauswirtschaft (Stufe Weiterbildung)
+
+```{r 336403, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Modulare Weiterbildung Ernährung und Hauswirtschaft (Stufe Weiterbildung)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336403_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Ern%C3%A4hrung%20und%20Hauswirtschaft%20(Stufe%20Weiterbildung)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Ern%C3%A4hrung%20und%20Hauswirtschaft%20(Stufe%20Weiterbildung)&year=2024) |
+|:--:|
+
+\
+
+
+### Modulare Weiterbildung Landwirtschaft: Betriebsleiterschule Stufe Berufsprüfung mit Eidg. Fachausweis
+
+```{r 336404, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Modulare Weiterbildung Landwirtschaft: Betriebsleiterschule Stufe Berufsprüfung mit Eidg. Fachausweis"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336404_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Landwirtschaft:%20Betriebsleiterschule%20Stufe%20Berufspr%C3%BCfung%20mit%20Eidg.%20Fachausweis&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Landwirtschaft:%20Betriebsleiterschule%20Stufe%20Berufspr%C3%BCfung%20mit%20Eidg.%20Fachausweis&year=2024) |
+|:--:|
+
+\
+
+
+### Modulare Weiterbildung Landwirtschaft: Betriebsleiterschule Stufe Meisterprüfung mit Eidg. Diplom
+
+```{r 336405, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Modulare Weiterbildung Landwirtschaft: Betriebsleiterschule Stufe Meisterprüfung mit Eidg. Diplom"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336405_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Landwirtschaft:%20Betriebsleiterschule%20Stufe%20Meisterpr%C3%BCfung%20mit%20Eidg.%20Diplom&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Modulare%20Weiterbildung%20Landwirtschaft:%20Betriebsleiterschule%20Stufe%20Meisterpr%C3%BCfung%20mit%20Eidg.%20Diplom&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Weiterbildungs- und Informationsveranstaltungen in der Beratung Land- und Hauswirtschaft
+
+```{r 336406, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Weiterbildungs- und Informationsveranstaltungen in der Beratung Land- und Hauswirtschaft"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336406_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Weiterbildungs-%20und%20Informationsveranstaltungen%20in%20der%20Beratung%20Land-%20und%20Hauswirtschaft&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Weiterbildungs-%20und%20Informationsveranstaltungen%20in%20der%20Beratung%20Land-%20und%20Hauswirtschaft&year=2024) |
+|:--:|
+
+\
+
+
+### Untersuchungen Bodenlabor
+
+```{r 336407, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Untersuchungen Bodenlabor"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336407_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Untersuchungen%20Bodenlabor&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Untersuchungen%20Bodenlabor&year=2024) |
+|:--:|
+
+\
+
+
+### Gastronomie und Hotellerie am Arenenberg
+
+```{r 336408, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Bildungs- und Beratungszentrum Arenenberg"]][["Gastronomie und Hotellerie am Arenenberg"]], year = "2024")
+ft_df$ft
+```
+
+```{r 336408_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Gastronomie%20und%20Hotellerie%20am%20Arenenberg&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Bildungs-%20und%20Beratungszentrum%20Arenenberg&table=Gastronomie%20und%20Hotellerie%20am%20Arenenberg&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 3940&emsp;Veterinäramt
+
+### Tierseuchenfälle TG (Anzahl betroffene Betriebe)
+
+```{r 339401, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Veterinäramt"]][["Tierseuchenfälle TG (Anzahl betroffene Betriebe)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 339401_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Veterin%C3%A4ramt&table=Tierseuchenf%C3%A4lle%20TG%20(Anzahl%20betroffene%20Betriebe)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Veterin%C3%A4ramt&table=Tierseuchenf%C3%A4lle%20TG%20(Anzahl%20betroffene%20Betriebe)&year=2024) |
+|:--:|
+
+\
+
+
+### Schlachtung und Fleischkontrolle
+
+```{r 339402, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DIV"]][["Veterinäramt"]][["Schlachtung und Fleischkontrolle"]], year = "2024")
+ft_df$ft
+```
+
+```{r 339402_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Veterin%C3%A4ramt&table=Schlachtung%20und%20Fleischkontrolle&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DIV&amt=Veterin%C3%A4ramt&table=Schlachtung%20und%20Fleischkontrolle&year=2024) |
+|:--:|
+
+\
+

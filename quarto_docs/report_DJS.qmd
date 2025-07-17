@@ -1,0 +1,1426 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 5&emsp;DJS
+
+## 5010&emsp;Generalsekretariat DJS
+
+### Verwaltungsrechtspflege
+
+```{r 550101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Generalsekretariat DJS"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 550101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\
+
+
+### Gastgewerbe (Gesetz über das Gastgewerbe und den Handel mit alkoholhaltigen Getränken, Gastgewerbegesetz, GastG; RB 554.51) 1997 bis 2023
+
+```{r 550102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Generalsekretariat DJS"]][["Gastgewerbe (Gesetz über das Gastgewerbe und den Handel mit alkoholhaltigen Getränken, Gastgewerbegesetz, GastG; RB 554.51) 1997 bis 2023"]], year = "2024")
+ft_df$ft
+```
+
+```{r 550102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Gastgewerbe%20(Gesetz%20%C3%BCber%20das%20Gastgewerbe%20und%20den%20Handel%20mit%20alkoholhaltigen%20Getr%C3%A4nken,%20Gastgewerbegesetz,%20GastG;%20RB%20554.51)%201997%20bis%202023&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Gastgewerbe%20(Gesetz%20%C3%BCber%20das%20Gastgewerbe%20und%20den%20Handel%20mit%20alkoholhaltigen%20Getr%C3%A4nken,%20Gastgewerbegesetz,%20GastG;%20RB%20554.51)%201997%20bis%202023&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Gastgewerbe (Gesetz über das Gastgewerbe und den Handel mit alkoholhaltigen Getränken, Gastgewerbegesetz, GastG; RB 554.51) 1997 bis 2023
+
+```{r 550102.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Generalsekretariat DJS"]][["Gastgewerbe (Gesetz über das Gastgewerbe und den Handel mit alkoholhaltigen Getränken, Gastgewerbegesetz, GastG; RB 554.51) 1997 bis 2023"]], year = "2024")
+ft_df$ft
+```
+
+```{r 550102.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Gastgewerbe%20(Gesetz%20%C3%BCber%20das%20Gastgewerbe%20und%20den%20Handel%20mit%20alkoholhaltigen%20Getr%C3%A4nken,%20Gastgewerbegesetz,%20GastG;%20RB%20554.51)%201997%20bis%202023&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Generalsekretariat%20DJS&table=Gastgewerbe%20(Gesetz%20%C3%BCber%20das%20Gastgewerbe%20und%20den%20Handel%20mit%20alkoholhaltigen%20Getr%C3%A4nken,%20Gastgewerbegesetz,%20GastG;%20RB%20554.51)%201997%20bis%202023&year=2024) |
+|:--:|
+
+\
+
+
+## 5110&emsp;Amt für Handelsregister und Zivilstandswesen
+
+### Firmen-Löschungen und Neueintragungen
+
+```{r 551101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Handelsregister und Zivilstandswesen"]][["Firmen-Löschungen und Neueintragungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Firmen-L%C3%B6schungen%20und%20Neueintragungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Firmen-L%C3%B6schungen%20und%20Neueintragungen&year=2024) |
+|:--:|
+
+\
+
+
+### Geschäftsentwicklung und Statistik Handelsregister
+
+```{r 551102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Handelsregister und Zivilstandswesen"]][["Geschäftsentwicklung und Statistik Handelsregister"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Gesch%C3%A4ftsentwicklung%20und%20Statistik%20Handelsregister&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Gesch%C3%A4ftsentwicklung%20und%20Statistik%20Handelsregister&year=2024) |
+|:--:|
+
+\
+
+
+### Namensänderungen
+
+```{r 551103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Handelsregister und Zivilstandswesen"]][["Namensänderungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Namens%C3%A4nderungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Namens%C3%A4nderungen&year=2024) |
+|:--:|
+
+\
+
+
+### Ordentliche Einbürgerungen
+
+```{r 551104, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Handelsregister und Zivilstandswesen"]][["Ordentliche Einbürgerungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551104_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Ordentliche%20Einb%C3%BCrgerungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Ordentliche%20Einb%C3%BCrgerungen&year=2024) |
+|:--:|
+
+\
+
+
+### Staatsangehörigkeit der Gesuchstellerinnen und Gesuchsteller
+
+```{r 551105, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Handelsregister und Zivilstandswesen"]][["Staatsangehörigkeit der Gesuchstellerinnen und Gesuchsteller"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551105_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Staatsangeh%C3%B6rigkeit%20der%20Gesuchstellerinnen%20und%20Gesuchsteller&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Handelsregister%20und%20Zivilstandswesen&table=Staatsangeh%C3%B6rigkeit%20der%20Gesuchstellerinnen%20und%20Gesuchsteller&year=2024) |
+|:--:|
+
+\
+
+
+## 5120&emsp;Zivilstandsämter (ZA)
+
+### Beurkundungen von ausgewählten Geschäftsfällen
+
+```{r 551201, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Zivilstandsämter (ZA)"]][["Beurkundungen von ausgewählten Geschäftsfällen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 551201_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Zivilstands%C3%A4mter%20(ZA)&table=Beurkundungen%20von%20ausgew%C3%A4hlten%20Gesch%C3%A4ftsf%C3%A4llen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Zivilstands%C3%A4mter%20(ZA)&table=Beurkundungen%20von%20ausgew%C3%A4hlten%20Gesch%C3%A4ftsf%C3%A4llen&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 5250&emsp;Staatsanwaltschaft
+
+### Strafverfahren wegen Verbrechen oder Vergehen
+
+```{r 552501, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Strafverfahren wegen Verbrechen oder Vergehen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552501_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Strafverfahren%20wegen%20Verbrechen%20oder%20Vergehen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Strafverfahren%20wegen%20Verbrechen%20oder%20Vergehen&year=2024) |
+|:--:|
+
+\
+
+
+### Strafverfahren wegen Übertretungen
+
+```{r 552502, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Strafverfahren wegen Übertretungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552502_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Strafverfahren%20wegen%20%C3%9Cbertretungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Strafverfahren%20wegen%20%C3%9Cbertretungen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Opferhilfeverfahren
+
+```{r 552503, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Opferhilfeverfahren"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552503_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Opferhilfeverfahren&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Opferhilfeverfahren&year=2024) |
+|:--:|
+
+\
+
+
+### Auftritte der Staatsanwaltschaft vor Gerichten
+
+```{r 552504, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Auftritte der Staatsanwaltschaft vor Gerichten"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552504_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Auftritte%20der%20Staatsanwaltschaft%20vor%20Gerichten&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Auftritte%20der%20Staatsanwaltschaft%20vor%20Gerichten&year=2024) |
+|:--:|
+
+\
+
+
+### Übrige Verfahren
+
+```{r 552505, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Übrige Verfahren"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552505_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=%C3%9Cbrige%20Verfahren&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=%C3%9Cbrige%20Verfahren&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Jugendanwaltschaftliche Sanktionen
+
+```{r 552506, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Jugendanwaltschaftliche Sanktionen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552506_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Jugendanwaltschaftliche%20Sanktionen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=Jugendanwaltschaftliche%20Sanktionen&year=2024) |
+|:--:|
+
+\
+
+
+### Fälle von Suizidbeihilfe
+
+```{r 552508, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Staatsanwaltschaft"]][["Fälle von Suizidbeihilfe"]], year = "2024")
+ft_df$ft
+```
+
+```{r 552508_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=F%C3%A4lle%20von%20Suizidbeihilfe&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Staatsanwaltschaft&table=F%C3%A4lle%20von%20Suizidbeihilfe&year=2024) |
+|:--:|
+
+\
+
+
+## 5350-5370&emsp;Amt für Justizvollzug
+
+### Strafen und Massnahmen
+
+```{r 55350-53701, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Strafen und Massnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53701_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Strafen%20und%20Massnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Strafen%20und%20Massnahmen&year=2024) |
+|:--:|
+
+\
+
+
+### Vollzugsentscheide
+
+```{r 55350-53701.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Vollzugsentscheide"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53701.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Vollzugsentscheide&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Vollzugsentscheide&year=2024) |
+|:--:|
+
+\
+
+
+### Strafregister
+
+```{r 55350-53702, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Strafregister"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53702_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Strafregister&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Strafregister&year=2024) |
+|:--:|
+
+\
+
+
+### Ausschreibungen
+
+```{r 55350-53703, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Ausschreibungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53703_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Ausschreibungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Ausschreibungen&year=2024) |
+|:--:|
+
+\
+
+
+### Mandate Bewährungsdienste
+
+```{r 55350-53704, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Mandate Bewährungsdienste"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53704_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Mandate%20Bew%C3%A4hrungsdienste&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Mandate%20Bew%C3%A4hrungsdienste&year=2024) |
+|:--:|
+
+\
+
+
+### Aufteilung nach Geschlecht (Mandate Bewährungsdienste)
+
+```{r 55350-53705, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Aufteilung nach Geschlecht (Mandate Bewährungsdienste)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53705_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Aufteilung%20nach%20Geschlecht%20(Mandate%20Bew%C3%A4hrungsdienste)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Aufteilung%20nach%20Geschlecht%20(Mandate%20Bew%C3%A4hrungsdienste)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Widerrufe während der Probezeit
+
+```{r 55350-53706, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Widerrufe während der Probezeit"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53706_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Widerrufe%20w%C3%A4hrend%20der%20Probezeit&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Widerrufe%20w%C3%A4hrend%20der%20Probezeit&year=2024) |
+|:--:|
+
+\
+
+
+### Kantonalgefängnis
+
+```{r 55350-53707, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Kantonalgefängnis"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53707_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Kantonalgef%C3%A4ngnis&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Kantonalgef%C3%A4ngnis&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Massnahmenzentrum Kalchrain
+
+```{r 55350-53708, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Justizvollzug"]][["Massnahmenzentrum Kalchrain"]], year = "2024")
+ft_df$ft
+```
+
+```{r 55350-53708_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Massnahmenzentrum%20Kalchrain&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Justizvollzug&table=Massnahmenzentrum%20Kalchrain&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 5430&emsp;Migrationsamt
+
+### Ständige ausländische Wohnbevölkerung
+
+```{r 554301, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Ständige ausländische Wohnbevölkerung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554301_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=St%C3%A4ndige%20ausl%C3%A4ndische%20Wohnbev%C3%B6lkerung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=St%C3%A4ndige%20ausl%C3%A4ndische%20Wohnbev%C3%B6lkerung&year=2024) |
+|:--:|
+
+\
+
+
+### Pässe und Identitätskarten
+
+```{r 554302, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Pässe und Identitätskarten"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554302_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=P%C3%A4sse%20und%20Identit%C3%A4tskarten&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=P%C3%A4sse%20und%20Identit%C3%A4tskarten&year=2024) |
+|:--:|
+
+\
+
+
+### Bewilligungen/Beglaubigungen
+
+```{r 554303, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Bewilligungen/Beglaubigungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554303_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Bewilligungen/Beglaubigungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Bewilligungen/Beglaubigungen&year=2024) |
+|:--:|
+
+\
+
+
+### Asyl und Rückkehr
+
+```{r 554304, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Asyl und Rückkehr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554304_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Asyl%20und%20R%C3%BCckkehr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Asyl%20und%20R%C3%BCckkehr&year=2024) |
+|:--:|
+
+\
+
+
+### Vollzug strafrechtlicher Landesverweisungen
+
+```{r 554305, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Vollzug strafrechtlicher Landesverweisungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554305_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Vollzug%20strafrechtlicher%20Landesverweisungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Vollzug%20strafrechtlicher%20Landesverweisungen&year=2024) |
+|:--:|
+
+\
+
+
+### Verschiedenes
+
+```{r 554306, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Migrationsamt"]][["Verschiedenes"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554306_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Verschiedenes&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Migrationsamt&table=Verschiedenes&year=2024) |
+|:--:|
+
+\newpage
+
+
+## 5450&emsp;Jagd- und Fischereiverwaltung
+
+### Abschuss- und Fallwildstatistik für das Jagdjahr
+
+```{r 554501, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Abschuss- und Fallwildstatistik für das Jagdjahr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554501_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Abschuss-%20und%20Fallwildstatistik%20f%C3%BCr%20das%20Jagdjahr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Abschuss-%20und%20Fallwildstatistik%20f%C3%BCr%20das%20Jagdjahr&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Wildschadenstatistik für das Jagdjahr
+
+```{r 554502, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Wildschadenstatistik für das Jagdjahr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554502_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Wildschadenstatistik%20f%C3%BCr%20das%20Jagdjahr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Wildschadenstatistik%20f%C3%BCr%20das%20Jagdjahr&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Fischfangstatistik Ober- und Untersee (Berufsfischer)
+
+```{r 554503, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischfangstatistik Ober- und Untersee (Berufsfischer)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554503_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20Ober-%20und%20Untersee%20(Berufsfischer)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20Ober-%20und%20Untersee%20(Berufsfischer)&year=2024) |
+|:--:|
+
+\
+
+
+### Fischfangstatistik Ober- und Untersee (Sportfischer)
+
+```{r 554504, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischfangstatistik Ober- und Untersee (Sportfischer)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554504_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20Ober-%20und%20Untersee%20(Sportfischer)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20Ober-%20und%20Untersee%20(Sportfischer)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Fischfangstatistik der kantonalen Pachtgewässer
+
+```{r 554505, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischfangstatistik der kantonalen Pachtgewässer"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554505_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20der%20kantonalen%20Pachtgew%C3%A4sser&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischfangstatistik%20der%20kantonalen%20Pachtgew%C3%A4sser&year=2024) |
+|:--:|
+
+\
+
+
+### Fischeinsätze im Ober- und Untersee
+
+```{r 554506, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischeinsätze im Ober- und Untersee"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554506_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischeins%C3%A4tze%20im%20Ober-%20und%20Untersee&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischeins%C3%A4tze%20im%20Ober-%20und%20Untersee&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Fischeinsätze in anderen Gewässern
+
+```{r 554507, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischeinsätze in anderen Gewässern"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554507_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischeins%C3%A4tze%20in%20anderen%20Gew%C3%A4ssern&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischeins%C3%A4tze%20in%20anderen%20Gew%C3%A4ssern&year=2024) |
+|:--:|
+
+\
+
+
+### Fischsterben
+
+```{r 554508, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Fischsterben"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554508_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischsterben&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Fischsterben&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Stellungnahmen zu Projekten und Gesuchen
+
+```{r 554509, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Jagd- und Fischereiverwaltung"]][["Stellungnahmen zu Projekten und Gesuchen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 554509_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Stellungnahmen%20zu%20Projekten%20und%20Gesuchen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Jagd-%20und%20Fischereiverwaltung&table=Stellungnahmen%20zu%20Projekten%20und%20Gesuchen&year=2024) |
+|:--:|
+
+\
+
+
+## 5510&emsp;Kantonspolizei
+
+### Allgemeine Diensttätigkeit (Regionalpolizei)
+
+```{r 555101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Allgemeine Diensttätigkeit (Regionalpolizei)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Allgemeine%20Dienstt%C3%A4tigkeit%20(Regionalpolizei)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Allgemeine%20Dienstt%C3%A4tigkeit%20(Regionalpolizei)&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Stationäre Geschwindigkeits- und Lichtsignalanlagen
+
+```{r 5551010, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Stationäre Geschwindigkeits- und Lichtsignalanlagen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551010_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Station%C3%A4re%20Geschwindigkeits-%20und%20Lichtsignalanlagen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Station%C3%A4re%20Geschwindigkeits-%20und%20Lichtsignalanlagen&year=2024) |
+|:--:|
+
+\
+
+
+### Geschwindigkeitskontrollen mit Nachfahrmessgeräten
+
+```{r 5551011, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Geschwindigkeitskontrollen mit Nachfahrmessgeräten"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551011_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Geschwindigkeitskontrollen%20mit%20Nachfahrmessger%C3%A4ten&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Geschwindigkeitskontrollen%20mit%20Nachfahrmessger%C3%A4ten&year=2024) |
+|:--:|
+
+\
+
+
+### Geschwindigkeitskontrollen mit Lasermessgeräten
+
+```{r 5551012, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Geschwindigkeitskontrollen mit Lasermessgeräten"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551012_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Geschwindigkeitskontrollen%20mit%20Lasermessger%C3%A4ten&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Geschwindigkeitskontrollen%20mit%20Lasermessger%C3%A4ten&year=2024) |
+|:--:|
+
+\
+
+
+### Betriebskontrollen Transporteure (ARV)
+
+```{r 5551013, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Betriebskontrollen Transporteure (ARV)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551013_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Betriebskontrollen%20Transporteure%20(ARV)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Betriebskontrollen%20Transporteure%20(ARV)&year=2024) |
+|:--:|
+
+\
+
+
+### Ereignisbewältigung / Dienstleistungen
+
+```{r 5551014, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Ereignisbewältigung / Dienstleistungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551014_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Ereignisbew%C3%A4ltigung%20/%20Dienstleistungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Ereignisbew%C3%A4ltigung%20/%20Dienstleistungen&year=2024) |
+|:--:|
+
+\
+
+
+### Verkehrsunfälle
+
+```{r 5551016, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Verkehrsunfälle"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551016_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Verkehrsunf%C3%A4lle&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Verkehrsunf%C3%A4lle&year=2024) |
+|:--:|
+
+\
+
+
+### Transporte
+
+```{r 5551017, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Transporte"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551017_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Transporte&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Transporte&year=2024) |
+|:--:|
+
+\
+
+
+### Bewilligungen
+
+```{r 5551017.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Bewilligungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551017.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Bewilligungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Bewilligungen&year=2024) |
+|:--:|
+
+\
+
+
+### Unfallgeschehen im Überblick: Unfälle
+
+```{r 5551018, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Unfallgeschehen im Überblick: Unfälle"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551018_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Unfallgeschehen%20im%20%C3%9Cberblick:%20Unf%C3%A4lle&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Unfallgeschehen%20im%20%C3%9Cberblick:%20Unf%C3%A4lle&year=2024) |
+|:--:|
+
+\
+
+
+### Unfallgeschehen im Überblick: Verunfallte
+
+```{r 5551018.5, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Unfallgeschehen im Überblick: Verunfallte"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551018.5_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Unfallgeschehen%20im%20%C3%9Cberblick:%20Verunfallte&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Unfallgeschehen%20im%20%C3%9Cberblick:%20Verunfallte&year=2024) |
+|:--:|
+
+\
+
+
+### Hauptunfallursachen
+
+```{r 5551019, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Hauptunfallursachen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551019_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Patrouillentätigkeit im Rahmen des Tourendienstes
+
+```{r 555102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Patrouillentätigkeit im Rahmen des Tourendienstes"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Patrouillent%C3%A4tigkeit%20im%20Rahmen%20des%20Tourendienstes&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Patrouillent%C3%A4tigkeit%20im%20Rahmen%20des%20Tourendienstes&year=2024) |
+|:--:|
+
+\
+
+
+### Hauptunfallursachen bei Unfällen mit Personenschaden
+
+```{r 5551020, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Hauptunfallursachen bei Unfällen mit Personenschaden"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551020_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen%20bei%20Unf%C3%A4llen%20mit%20Personenschaden&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen%20bei%20Unf%C3%A4llen%20mit%20Personenschaden&year=2024) |
+|:--:|
+
+\
+
+
+### Hauptunfallursachen bei Unfällen mit Personenschaden nach Alter
+
+```{r 5551021, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Hauptunfallursachen bei Unfällen mit Personenschaden nach Alter"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551021_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen%20bei%20Unf%C3%A4llen%20mit%20Personenschaden%20nach%20Alter&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Hauptunfallursachen%20bei%20Unf%C3%A4llen%20mit%20Personenschaden%20nach%20Alter&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Seepolizei: Kontrollen
+
+```{r 5551022, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Seepolizei: Kontrollen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551022_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Kontrollen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Kontrollen&year=2024) |
+|:--:|
+
+\
+
+
+### Seepolizei: Sturmwarn- und Rettungseinsätze
+
+```{r 5551023, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Seepolizei: Sturmwarn- und Rettungseinsätze"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551023_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Sturmwarn-%20und%20Rettungseins%C3%A4tze&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Sturmwarn-%20und%20Rettungseins%C3%A4tze&year=2024) |
+|:--:|
+
+\
+
+
+### Seepolizei: Taucheinsätze
+
+```{r 5551024, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Seepolizei: Taucheinsätze"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551024_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Taucheins%C3%A4tze&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Taucheins%C3%A4tze&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Seepolizei: Unfälle
+
+```{r 5551025, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Seepolizei: Unfälle"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551025_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Unf%C3%A4lle&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Seepolizei:%20Unf%C3%A4lle&year=2024) |
+|:--:|
+
+\
+
+
+### Ölwehr: Unfälle / Gewässerverschmutzungen
+
+```{r 5551026, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Ölwehr: Unfälle / Gewässerverschmutzungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551026_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=%C3%96lwehr:%20Unf%C3%A4lle%20/%20Gew%C3%A4sserverschmutzungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=%C3%96lwehr:%20Unf%C3%A4lle%20/%20Gew%C3%A4sserverschmutzungen&year=2024) |
+|:--:|
+
+\
+
+
+### Ölwehr: Einsätze
+
+```{r 5551027, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Ölwehr: Einsätze"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551027_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=%C3%96lwehr:%20Eins%C3%A4tze&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=%C3%96lwehr:%20Eins%C3%A4tze&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Schifffahrtskontrolle: Schiffsabnahmen
+
+```{r 5551028, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Schifffahrtskontrolle: Schiffsabnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551028_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Schiffsabnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Schiffsabnahmen&year=2024) |
+|:--:|
+
+\
+
+
+### Schifffahrtskontrolle: Schiffsführerprüfungen
+
+```{r 5551029, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Schifffahrtskontrolle: Schiffsführerprüfungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551029_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Schiffsf%C3%BChrerpr%C3%BCfungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Schiffsf%C3%BChrerpr%C3%BCfungen&year=2024) |
+|:--:|
+
+\
+
+
+### Schwerpunktaktionen
+
+```{r 555103, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Schwerpunktaktionen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555103_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schwerpunktaktionen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schwerpunktaktionen&year=2024) |
+|:--:|
+
+\
+
+
+### Schifffahrtskontrolle: Bewilligungen / Stellungnahmen
+
+```{r 5551031, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Schifffahrtskontrolle: Bewilligungen / Stellungnahmen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551031_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Bewilligungen%20/%20Stellungnahmen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Bewilligungen%20/%20Stellungnahmen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Schifffahrtskontrolle: Bestand der Ende Jahr bei der Schifffahrtskontrolle des Kantons Thurgau immatrikulierten Wasserfahrzeuge
+
+```{r 5551032, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Schifffahrtskontrolle: Bestand der Ende Jahr bei der Schifffahrtskontrolle des Kantons Thurgau immatrikulierten Wasserfahrzeuge"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551032_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Bestand%20der%20Ende%20Jahr%20bei%20der%20Schifffahrtskontrolle%20des%20Kantons%20Thurgau%20immatrikulierten%20Wasserfahrzeuge&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Schifffahrtskontrolle:%20Bestand%20der%20Ende%20Jahr%20bei%20der%20Schifffahrtskontrolle%20des%20Kantons%20Thurgau%20immatrikulierten%20Wasserfahrzeuge&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Einsatzabteilung: Übersicht
+
+```{r 5551033, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Einsatzabteilung: Übersicht"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551033_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Einsatzabteilung:%20%C3%9Cbersicht&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Einsatzabteilung:%20%C3%9Cbersicht&year=2024) |
+|:--:|
+
+\
+
+
+### Kommunikation und Prävention: Aktivitäten Prävention
+
+```{r 5551037, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Kommunikation und Prävention: Aktivitäten Prävention"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551037_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Aktivit%C3%A4ten%20Pr%C3%A4vention&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Aktivit%C3%A4ten%20Pr%C3%A4vention&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Kommunikation und Prävention: Interventionen bei Häuslicher Gewalt
+
+```{r 5551038, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Kommunikation und Prävention: Interventionen bei Häuslicher Gewalt"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551038_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Interventionen%20bei%20H%C3%A4uslicher%20Gewalt&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Interventionen%20bei%20H%C3%A4uslicher%20Gewalt&year=2024) |
+|:--:|
+
+\
+
+
+### Kommunikation und Prävention: Verkehrsprävention
+
+```{r 5551039, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Kommunikation und Prävention: Verkehrsprävention"]], year = "2024")
+ft_df$ft
+```
+
+```{r 5551039_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Verkehrspr%C3%A4vention&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kommunikation%20und%20Pr%C3%A4vention:%20Verkehrspr%C3%A4vention&year=2024) |
+|:--:|
+
+\
+
+
+### Zentrale Ermittlung
+
+```{r 555104, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Zentrale Ermittlung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555104_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Zentrale%20Ermittlung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Zentrale%20Ermittlung&year=2024) |
+|:--:|
+
+\
+
+
+### Regionaler Ermittlungsdienst
+
+```{r 555105, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Regionaler Ermittlungsdienst"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555105_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Regionaler%20Ermittlungsdienst&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Regionaler%20Ermittlungsdienst&year=2024) |
+|:--:|
+
+\
+
+
+### Kriminalinnendienst
+
+```{r 555106, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Kriminalinnendienst"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555106_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kriminalinnendienst&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kriminalinnendienst&year=2024) |
+|:--:|
+
+\
+
+
+### Kriminaltechnischer Dienst
+
+```{r 555107, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Kriminaltechnischer Dienst"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555107_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kriminaltechnischer%20Dienst&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Kriminaltechnischer%20Dienst&year=2024) |
+|:--:|
+
+\
+
+
+### Verkehrskontrollen
+
+```{r 555108, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Verkehrskontrollen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555108_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Verkehrskontrollen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Verkehrskontrollen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Mobile Geschwindigkeitskontrollen
+
+```{r 555109, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Kantonspolizei"]][["Mobile Geschwindigkeitskontrollen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 555109_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Mobile%20Geschwindigkeitskontrollen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Kantonspolizei&table=Mobile%20Geschwindigkeitskontrollen&year=2024) |
+|:--:|
+
+\
+
+
+## 5640&emsp;Amt für Bevölkerungsschutz und Armee
+
+### Zivilschutzdiensttage
+
+```{r 556401, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Bevölkerungsschutz und Armee"]][["Zivilschutzdiensttage"]], year = "2024")
+ft_df$ft
+```
+
+```{r 556401_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Zivilschutzdiensttage&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Zivilschutzdiensttage&year=2024) |
+|:--:|
+
+\
+
+
+### Wehrpflichtersatzabgaben
+
+```{r 556403, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Bevölkerungsschutz und Armee"]][["Wehrpflichtersatzabgaben"]], year = "2024")
+ft_df$ft
+```
+
+```{r 556403_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Wehrpflichtersatzabgaben&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Wehrpflichtersatzabgaben&year=2024) |
+|:--:|
+
+\
+
+
+### Einsprachen/Gesuche/Befreiungen
+
+```{r 556404, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Bevölkerungsschutz und Armee"]][["Einsprachen/Gesuche/Befreiungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 556404_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Einsprachen/Gesuche/Befreiungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Einsprachen/Gesuche/Befreiungen&year=2024) |
+|:--:|
+
+\
+
+
+### Mahnungen/Betreibungen/Verlustscheine/Ausstehende Guthaben
+
+```{r 556405, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Bevölkerungsschutz und Armee"]][["Mahnungen/Betreibungen/Verlustscheine/Ausstehende Guthaben"]], year = "2024")
+ft_df$ft
+```
+
+```{r 556405_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Mahnungen/Betreibungen/Verlustscheine/Ausstehende%20Guthaben&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Mahnungen/Betreibungen/Verlustscheine/Ausstehende%20Guthaben&year=2024) |
+|:--:|
+
+\
+
+
+### Disziplinarwesen
+
+```{r 556406, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DJS"]][["Amt für Bevölkerungsschutz und Armee"]][["Disziplinarwesen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 556406_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Disziplinarwesen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DJS&amt=Amt%20f%C3%BCr%20Bev%C3%B6lkerungsschutz%20und%20Armee&table=Disziplinarwesen&year=2024) |
+|:--:|
+
+\
+

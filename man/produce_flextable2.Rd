@@ -10,26 +10,29 @@ produce_flextable2(
   dep = NULL,
   amt = NULL,
   table = NULL,
-  year
+  year,
+  fontsize = 9
 )
 }
 \arguments{
-\item{elem}{Optional. A single table element. If NULL, retrieved from `data_list` using `dep`, `amt`, and `table`.}
+\item{elem}{Optional. A single table element configuration}
 
-\item{data_list}{A nested list of table data and metadata.}
+\item{data_list}{A nested list of table data and metadata}
 
-\item{dep}{Department identifier in the data list.}
+\item{dep}{Department identifier in the data list}
 
-\item{amt}{Amount identifier in the data list.}
+\item{amt}{Amount identifier in the data list}
 
-\item{table}{Table identifier.}
+\item{table}{Table identifier}
 
-\item{year}{The year to filter the table data.}
+\item{year}{The year to filter the table data}
+
+\item{fontsize}{Font size for the table (default: 9)}
 }
 \value{
-A list with two elements: `ft` (the `flextable` object) and `data` (processed wide-format data).
+A list with 'ft' (flextable object) and 'data' (processed data)
 }
 \description{
-Similar to `produce_flextable()`, but returns both the `flextable` object and the intermediate
-`template_data` used to build it. Useful for exporting or additional processing.
+Main function that creates flextables based on configuration elements.
+Supports multiple table types and formatting options.
 }

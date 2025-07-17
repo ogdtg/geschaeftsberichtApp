@@ -11,7 +11,7 @@
 #' @param year_col Column indicating the year (default is `"jahr"`).
 #'
 #' @return A wide-format data frame with aggregated subgroups and labels.
-#' @importFrom dplyr rename group_by mutate case_when ungroup summarise_at select bind_rows relocate
+#' @importFrom dplyr rename group_by mutate case_when ungroup summarise_at select bind_rows relocate n filter vars
 #' @importFrom tidyr pivot_wider
 #' @export
 template_colname_wide_grouped <- function(data,
@@ -21,7 +21,7 @@ template_colname_wide_grouped <- function(data,
                                           val_col,
                                           year_col = "jahr") {
   df <- data %>%
-    rename(
+    dplyr::rename(
       group = {{ group_col }},
       label = {{ label_col }},
       year = {{ year_col }},
@@ -30,42 +30,134 @@ template_colname_wide_grouped <- function(data,
     )
 
   temp_df <- df %>%
-    pivot_wider(names_from = colnames, values_from = value)
+    tidyr::pivot_wider(names_from = colnames, values_from = value)
 
   no_group_data <- temp_df %>%
-    group_by(group) %>%
-    mutate(.n_group = n(),
-           .label = case_when(.n_group == 1 ~ label, # row_number() == 1 ~ as.character(group),
+    dplyr::group_by(group) %>%
+    dplyr::mutate(.n_group = n(),
+           .label = dplyr::case_when(.n_group == 1 ~ label, # row_number() == 1 ~ as.character(group),
                               TRUE ~ paste0("- ", as.character(label)))) %>%
-    ungroup()
+    dplyr::ungroup()
 
   totals_data <- no_group_data %>%
-    filter(.n_group > 1)
+    dplyr::filter(.n_group > 1)
 
   grouped_df <- lapply(unique(totals_data$group), function(x) {
     temp_total <- totals_data %>%
-      filter(group == x) %>%
-      group_by(group) %>%
-      summarise_at(vars(all_of(unique(df$colnames))), sum, na.rm = T) %>%
-      rename(.label = "group")
+      dplyr::filter(group == x) %>%
+      dplyr::group_by(group) %>%
+      dplyr::summarise_at(dplyr::vars(all_of(unique(df$colnames))), sum, na.rm = T) %>%
+      dplyr::rename(.label = "group")
 
     temp <-  totals_data %>%
-      filter(group == x) %>%
-      select(-c(year, group, .n_group, label))
+      dplyr::filter(group == x) %>%
+      dplyr::select(-c(year, group, .n_group, label))
 
 
     temp_total %>%
-      bind_rows(temp)
+      dplyr::bind_rows(temp)
 
 
-  }) %>% bind_rows()
+  }) %>% dplyr::bind_rows()
 
   result <- no_group_data %>%
-    filter(.n_group == 1) %>%
-    select(-c(year, group, .n_group, label)) %>%
-    relocate(.label) %>%
-    bind_rows(grouped_df) %>%
-    rename(Kennwert = ".label")
+    dplyr::filter(.n_group == 1) %>%
+    dplyr::select(-c(year, group, .n_group, label)) %>%
+    dplyr::relocate(.label) %>%
+    dplyr::bind_rows(grouped_df) %>%
+    dplyr::rename(Kennwert = ".label")
+
+  return(result)
+}
+
+
+template_timeseries_nested_col <- function(data,
+                                          group_col,
+                                          label_col,
+                                          val_col,
+                                          year_col = "jahr",
+                                          num_years,
+                                          no_subtotals = F,
+                                          new_names) {
+
+
+
+  df <- data %>%
+    dplyr::rename(
+      group = {{ group_col }},
+      label = {{ label_col }},
+      year = {{ year_col }},
+      value = {{ val_col }}
+    )
+
+
+  if (str_detect(df$year[1],"\\d\\d\\d\\d/\\d\\d\\d\\d")){
+    df <- df %>%
+      mutate(temp_year = str_extract(year,"^\\d\\d\\d\\d")) %>%
+      filter(temp_year>=(max(as.numeric(temp_year))-(as.numeric(num_years)-1))) %>%
+      select(-temp_year) %>%
+      distinct()
+
+  } else {
+    df <- df %>%
+      mutate(year =as.numeric(year)) %>%
+      filter(year>=(max(year)-as.numeric(num_years))) %>%
+      distinct()
+  }
+
+
+  temp_df <- df %>%
+    tidyr::pivot_wider(names_from = year, values_from = value)
+
+  no_group_data <- temp_df %>%
+    dplyr::group_by(group) %>%
+    dplyr::mutate(.n_group = n(),
+                  .label = dplyr::case_when(.n_group == 1 ~ label, # row_number() == 1 ~ as.character(group),
+                                            TRUE ~ paste0("- ", as.character(label)))) %>%
+    dplyr::ungroup()
+
+  totals_data <- no_group_data %>%
+    dplyr::filter(.n_group > 1)
+
+  grouped_df <- lapply(unique(totals_data$group), function(x) {
+    temp_total <- totals_data %>%
+      dplyr::filter(group == x) %>%
+      dplyr::group_by(group) %>%
+      dplyr::summarise_at(dplyr::vars(all_of(unique(as.character(df$year)))), sum, na.rm = T) %>%
+      dplyr::rename(.label = "group") %>%
+      mutate(total_col = T)
+
+    if (no_subtotals){
+      years <- unique(df$year)
+      for (yr in years) {
+        temp_total[[as.character(yr)]] <- NA
+      }
+    }
+
+    temp <-  totals_data %>%
+      dplyr::filter(group == x) %>%
+      dplyr::select(-c( group, .n_group, label))
+
+
+    temp_total %>%
+      dplyr::bind_rows(temp)
+
+
+  }) %>% dplyr::bind_rows()
+
+  if (is.null(new_names)){
+    new_names <- "Kennwert"
+  }
+
+  result <- no_group_data %>%
+    dplyr::filter(.n_group == 1) %>%
+    dplyr::select(-c(group, .n_group, label)) %>%
+    dplyr::relocate(.label) %>%
+    dplyr::bind_rows(grouped_df) %>%
+    dplyr::rename(!!new_names := ".label")
+
+
+
 
   return(result)
 }
@@ -99,6 +191,29 @@ template_none <- function(data,
   }
 
   return(result)
+}
+
+
+template_wide <- function(data,year_col = "jahr",val_col,colnames_col,new_names){
+  df <- data %>%
+    dplyr::rename(
+      year = {{ year_col }},
+      value = {{ val_col }},
+      colnames = {{ colnames_col }}
+    ) %>%
+    select(-year)
+
+
+  temp_df <- df %>%
+    tidyr::pivot_wider(names_from = colnames, values_from = value)
+
+  if (is.null(new_names)){
+    new_names <- "Kennwert"
+  }
+
+  names(temp_df)[1] <- new_names
+
+  temp_df
 }
 
 
@@ -181,28 +296,305 @@ inverse_locf <- function(x) {
 #' @importFrom tidyr pivot_wider
 #' @importFrom rlang ensym as_name sym
 #' @export
-template_nested_col <- function(data, level1_col, level2_col, colnames_col, val_col,
+# template_nested_col <- function(data, level1_col, level2_col, colnames_col, val_col,
+#                                 year_col = "jahr", level1_name = NULL, level2_name = NULL) {
+#
+#   # Default name assignments
+#   if (is.null(level1_name)) level1_name <- level1_col
+#   if (is.null(level2_name)) level2_name <- level2_col
+#
+#   if (is.null(colnames_col)){
+#     df <- data %>%
+#       rename(
+#         value = {{ val_col }},
+#         year = {{ year_col }},
+#         !!level1_name := {{ level1_col }},
+#         !!level2_name := {{ level2_col }}
+#       ) %>%
+#       # pivot_wider(names_from = colnames, values_from = value) %>%
+#       mutate(!!sym(level1_name) := inverse_locf(!!sym(level1_name))) %>%
+#       select(-year)
+#   } else {
+#     df <- data %>%
+#       rename(
+#         colnames = {{ colnames_col }},
+#         value = {{ val_col }},
+#         year = {{ year_col }},
+#         !!level1_name := {{ level1_col }},
+#         !!level2_name := {{ level2_col }}
+#       ) %>%
+#       pivot_wider(names_from = colnames, values_from = value) %>%
+#       mutate(!!sym(level1_name) := inverse_locf(!!sym(level1_name))) %>%
+#       select(-year)
+#   }
+#
+#
+#   df
+# }
+
+
+
+
+template_nested_col <- function(data,
+                                group_col,
+                                label_col,
+                                val_col,
+                                year_col = "jahr",
+                                num_years,
+                                colnames_col,
+                                no_subtotals = F,
+                                new_names,
+                                subtotals_in_data = NULL) {
+
+
+
+
+  df <- data %>%
+    dplyr::rename(
+      group = {{ group_col }},
+      label = {{ label_col }},
+      year = {{ year_col }},
+      value = {{ val_col }},
+      colnames = {{ colnames_col }}
+    ) %>%
+    select(-year)
+
+
+
+
+
+  temp_df <- df %>%
+    tidyr::pivot_wider(names_from = colnames, values_from = value)
+
+  no_group_data <- temp_df %>%
+    dplyr::group_by(group) %>%
+    dplyr::mutate(.n_group = n(),
+                  .label = dplyr::case_when(.n_group == 1 & group == label~ label, # row_number() == 1 ~ as.character(group),
+                                            TRUE ~ paste0("- ", as.character(label)))) %>%
+    dplyr::ungroup()
+
+  totals_data <- no_group_data %>%
+    dplyr::filter(.n_group > 1|group != label)
+
+  if (isTRUE(subtotals_in_data)){
+    totals_data_mod <- totals_data %>%
+      filter(group == label)
+
+    totals_data <- totals_data %>%
+      anti_join(totals_data_mod,join_by(group,label,.label))
+
+    no_group_data <- no_group_data %>%
+      anti_join(totals_data_mod,join_by(group,label,.label))
+  }
+
+
+
+
+  grouped_df <- lapply(unique(totals_data$group), function(x) {
+
+    if (isTRUE(subtotals_in_data)){
+      temp_total <- totals_data_mod %>%
+        dplyr::filter(group == x) %>%
+        mutate(total_col = T) %>%
+        select(-c(.n_group,.label,label)) %>%
+        rename(".label" = group)
+
+    } else {
+      temp_total <- totals_data %>%
+        dplyr::filter(group == x) %>%
+        dplyr::group_by(group) %>%
+        dplyr::summarise_at(dplyr::vars(all_of(unique(as.character(df$colnames)))), sum, na.rm = T) %>%
+        dplyr::rename(.label = "group") %>%
+        mutate(total_col = T)
+    }
+
+
+
+    if (isTRUE(no_subtotals)){
+      cols_df <- unique(df$colnames)
+      for (yr in cols_df) {
+        temp_total[[as.character(yr)]] <- NA
+      }
+    }
+
+    temp <-  totals_data %>%
+      dplyr::filter(group == x) %>%
+      dplyr::select(-c( group, .n_group, label))
+
+
+    temp_total %>%
+      dplyr::bind_rows(temp)
+
+
+  }) %>% dplyr::bind_rows()
+
+  if (is.null(new_names)){
+    new_names <- "Kennwert"
+  }
+
+  result <- no_group_data %>%
+    dplyr::filter(.n_group == 1 & group==label) %>%
+    dplyr::select(-c(group, .n_group, label)) %>%
+    dplyr::relocate(.label) %>%
+    dplyr::bind_rows(grouped_df) %>%
+    dplyr::rename(!!new_names := ".label")
+
+
+
+
+  return(result)
+}
+
+
+
+
+template_nested_col_subsection <- function(data, level1_col, level2_col,colnames_col, val_col,
                                 year_col = "jahr", level1_name = NULL, level2_name = NULL) {
 
   # Default name assignments
-  if (is.null(level1_name)) level1_name <- rlang::as_name(ensym(level1_col))
-  if (is.null(level2_name)) level2_name <- rlang::as_name(ensym(level2_col))
+  if (is.null(level1_name))
+    level1_name <- level1_col
+  if (is.null(level2_name))
+    level2_name <- level2_col
+
+
+  data_list <- list()
+
+  if (is.null(colnames_col)){
+    df <- data %>%
+      rename(
+        value = {{ val_col }},
+        year = {{ year_col }},
+        !!level1_name := {{ level1_col }},
+        !!level2_name := {{ level2_col }}
+      ) %>%
+      # pivot_wider(names_from = colnames, values_from = value) %>%
+      select(-year) %>%
+      mutate(value = as.numeric(value))
+
+
+    for (lvl in unique(df[[level1_name]])) {
+      total_row <- df %>%
+        filter(.data[[level1_name]] == lvl) %>%
+        group_by(.data[[level1_name]]) %>%
+        summarise(value = sum(value), .groups = "drop") %>%
+        mutate(total = TRUE)
+
+      temp_data <- df %>%
+        filter(.data[[level1_name]] == lvl) %>%
+        select(-all_of(level1_name))
+
+      data_list[[lvl]] <- total_row %>%
+        bind_rows(temp_data) %>%
+        relocate(value,.after = last_col()) %>%
+        relocate(total,.after = last_col())
+    }
+  } else {
+
+    colnames_vals_unique <- unique(data[[colnames_col]])
+    df <- data %>%
+      rename(
+        colnames = {{ colnames_col }},
+        value = {{ val_col }},
+        year = {{ year_col }},
+        !!level1_name := {{ level1_col }},
+        !!level2_name := {{ level2_col }}
+      ) %>%
+      mutate(value = as.numeric(value)) %>%
+      pivot_wider(names_from = colnames, values_from = value) %>%
+      select(-year)
+
+    for (lvl in unique(df[[level1_name]])) {
+      total_row <- df %>%
+        filter(.data[[level1_name]] == lvl) %>%
+        group_by(.data[[level1_name]]) %>%
+        summarise_at(vars(all_of(colnames_vals_unique)),sum) %>%
+        mutate(total = TRUE)
+
+      temp_data <- df %>%
+        filter(.data[[level1_name]] == lvl) %>%
+        select(-all_of(level1_name))
+
+      data_list[[lvl]] <- total_row %>%
+        bind_rows(temp_data) %>%
+        relocate(all_of(colnames_vals_unique),.after = last_col()) %>%
+        relocate(total,.after = last_col())
+    }
+  }
+
+
+
+
+  data_list %>% bind_rows()
+}
+
+
+template_timeseries <- function(data, val_col,year_col = "jahr",num_years,new_names=NULL) {
+
+  # Default name assignments
+
+  if (is.null(new_names)) new_names <- ""
+
 
   df <- data %>%
     rename(
-      colnames = {{ colnames_col }},
       value = {{ val_col }},
-      year = {{ year_col }},
-      !!level1_name := {{ level1_col }},
-      !!level2_name := {{ level2_col }}
-    ) %>%
-    pivot_wider(names_from = colnames, values_from = value) %>%
-    mutate(!!sym(level1_name) := inverse_locf(!!sym(level1_name))) %>%
-    select(-year)
+      year = {{ year_col }}
+    )
 
+  if (str_detect(df$year[1],"\\d\\d\\d\\d/\\d\\d\\d\\d")){
+    df <- df %>%
+      mutate(temp_year = str_extract(year,"^\\d\\d\\d\\d")) %>%
+      filter(temp_year>=(max(as.numeric(temp_year))-(as.numeric(num_years)-1))) %>%
+      select(-temp_year) %>%
+      distinct() %>%
+      pivot_wider(names_from = year, values_from = value)
+
+  } else {
+    df <- df %>%
+      filter(year>=(max(as.numeric(year))-(as.numeric(num_years)-1))) %>%
+      distinct() %>%
+      pivot_wider(names_from = year, values_from = value)
+  }
+
+
+
+
+  # Bei timeseries immer die erste Spalte als Name
+  names(df)[1] <- new_names
   df
 }
 
+
+template_nested_col_nested_header <- function(data,
+                                              group_col,
+                                              label_col,
+                                              level1_col,
+                                              level2_col,
+                                              val_col,
+                                              no_subtotals,
+                                              new_names,
+                                              subtotals_in_data = FALSE) {
+
+
+
+  wide_data <- data %>%
+    unite("header_col", all_of(c(level1_col, level2_col)), sep = "__")
+
+
+  template_data <- template_nested_col(
+    data = wide_data,
+    group_col = group_col,
+    label_col = label_col,
+    val_col = val_col,
+    colnames_col = "header_col",
+    no_subtotals = no_subtotals,
+    new_names = new_names,
+    subtotals_in_data = subtotals_in_data
+  )
+
+  template_data
+}
 
 #' Reverse Wide Grouped Template to Long Format
 #'
@@ -218,12 +610,12 @@ template_nested_col <- function(data, level1_col, level2_col, colnames_col, val_
 #' @export
 reverse_template_colname_wide_grouped <- function(data, group_col = "group", label_col = "label", year_col = "jahr") {
   data_long <- data %>%
-    pivot_longer(
+    tidyr::pivot_longer(
       cols = -c({{ group_col }}, {{ label_col }}),
       names_to = "colnames",
       values_to = "value"
     ) %>%
-    rename(
+    dplyr::rename(
       {{ group_col }} := {{ group_col }},
       {{ label_col }} := {{ label_col }},
       {{ year_col }} := {{ year_col }}

@@ -34,7 +34,17 @@ The `geschaeftsberichtApp` package powers the interactive dashboard accompanying
 
 You can install the development version of geschaeftsberichtApp like so:
 
-``` r
+``` {r, eval = FALSE}
 devtools::install_github("ogdtg/geschaeftsberichtApp")
+```
+
+## Run the app
+
+
+After successfull installation, you can run the app by using the following code:
+
+``` {r, eval = FALSE}
+library(geschaeftsberichtApp)
+geschaeftsberichtApp::run_a
 ```
 

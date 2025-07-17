@@ -7,11 +7,11 @@
 get_unnested_cols(ft)
 }
 \arguments{
-\item{ft}{A `flextable` object with a nested header structure.}
+\item{ft}{A flextable object with a nested header structure}
 }
 \value{
-A numeric vector of column indices that are unnested.
+A numeric vector of column indices that are unnested
 }
 \description{
-Extracts indices of columns in a `flextable` object that do not contain hierarchical headers.
+Extracts indices of columns in a flextable object that do not contain hierarchical headers.
 }

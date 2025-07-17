@@ -64,12 +64,22 @@ mod_tableview_server <- function(id, input_values, nested_data) {
 
     selected_table <- reactive({
       req(input_values$dept(), input_values$amt(), input_values$table())
+#
+#       temp_id <- table_list %>%
+#         filter(dep ==input_values$dept()) %>%
+#         filter(amt ==input_values$amt()) %>%
+#         filter(table == input_values$table()) %>%
+#         pull(id)
+#
+#       temp <- produce_elem(id = temp_id,table_list = table_list,data_list = data_list)
+#       print(temp)
+#       temp
       nested_data()[[input_values$dept()]][[input_values$amt()]][[input_values$table()]]
     })
 
     flextable_content <- reactive({
       req(input_values$dept(), input_values$amt(), input_values$table(),input_values$year(),selected_table())
-      produce_flextable2(elem=selected_table(),year = input_values$year())
+      produce_flextable(elem=selected_table(),year = input_values$year())
 
     })
 
@@ -83,7 +93,7 @@ mod_tableview_server <- function(id, input_values, nested_data) {
     output$flextable_out <- renderUI({
       req(input_values$year())
       flextable_content()$ft %>%
-        htmltools_value()
+        flextable::htmltools_value()
     })
 
 

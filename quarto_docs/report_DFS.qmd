@@ -1,0 +1,86 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 7&emsp;DFS
+
+## 7010&emsp;Generalsekretariat DFS
+
+### Verwaltungsrechtspflege
+
+```{r 770101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DFS"]][["Generalsekretariat DFS"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 770101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Generalsekretariat%20DFS&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Generalsekretariat%20DFS&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Medien Thurgau
+
+```{r 770102, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DFS"]][["Generalsekretariat DFS"]][["Medien Thurgau"]], year = "2024")
+ft_df$ft
+```
+
+```{r 770102_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Generalsekretariat%20DFS&table=Medien%20Thurgau&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Generalsekretariat%20DFS&table=Medien%20Thurgau&year=2024) |
+|:--:|
+
+\
+
+
+## 7110&emsp;Personalamt
+
+### Durchschnittliche Stellenquanten und Stellenbelegungen pro Amt
+
+```{r 771101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DFS"]][["Personalamt"]][["Durchschnittliche Stellenquanten und Stellenbelegungen pro Amt"]], year = "2024")
+ft_df$ft
+```
+
+```{r 771101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Personalamt&table=Durchschnittliche%20Stellenquanten%20und%20Stellenbelegungen%20pro%20Amt&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DFS&amt=Personalamt&table=Durchschnittliche%20Stellenquanten%20und%20Stellenbelegungen%20pro%20Amt&year=2024) |
+|:--:|
+
+\
+

@@ -1,0 +1,712 @@
+---
+title: ""
+format:
+  docx:
+    reference-doc: /r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/vorlagen//vorlage_word2.docx
+params:
+  year: 2024
+  amt: "Amt für Daten und Statistik"
+execute:
+  echo: false
+  message: false
+  warning: false
+---
+
+```{r setup}
+library(flextable)
+library(tidyverse)
+library(officer)
+library(qrcode)
+
+source("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/R/fct_flextable_full.R")
+
+# ogd_test <- readRDS("../data/final_data_list.rds")
+# ogd_test <- readRDS("../data/final_data_list_mod.rds")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/data_list.rda")
+load("/r-proj/stat/ogd/stat_anhang/geschaeftsberichtApp/data/table_list.rda")
+nested_data_ogd <- produce_data_list()
+
+```
+
+# 4&emsp;DEK
+
+## 4010&emsp;Generalsekretariat DEK
+
+### Verwaltungsrechtspflege
+
+```{r 440101, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Generalsekretariat DEK"]][["Verwaltungsrechtspflege"]], year = "2024")
+ft_df$ft
+```
+
+```{r 440101_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Generalsekretariat%20DEK&table=Verwaltungsrechtspflege&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Generalsekretariat%20DEK&table=Verwaltungsrechtspflege&year=2024) |
+|:--:|
+
+\
+
+
+## 2.1&emsp;Kinder und Jugendliche in Ausbildung
+
+### Gesamtübersicht Schülerzahlen
+
+```{r 42.11, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Gesamtübersicht Schülerzahlen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.11_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Gesamt%C3%BCbersicht%20Sch%C3%BClerzahlen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Gesamt%C3%BCbersicht%20Sch%C3%BClerzahlen&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler in Sonderschulen
+
+```{r 42.12, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler in Sonderschulen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.12_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Sonderschulen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Sonderschulen&year=2024) |
+|:--:|
+
+\
+
+
+### Integrativ und in ausserkantonalen Schulen geförderte Thurgauer Sonderschülerinnen und -schüler
+
+```{r 42.13, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Integrativ und in ausserkantonalen Schulen geförderte Thurgauer Sonderschülerinnen und -schüler"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.13_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Integrativ%20und%20in%20ausserkantonalen%20Schulen%20gef%C3%B6rderte%20Thurgauer%20Sondersch%C3%BClerinnen%20und%20-sch%C3%BCler&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Integrativ%20und%20in%20ausserkantonalen%20Schulen%20gef%C3%B6rderte%20Thurgauer%20Sondersch%C3%BClerinnen%20und%20-sch%C3%BCler&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler an der öffentlichen Volksschule
+
+```{r 42.14, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler an der öffentlichen Volksschule"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.14_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20der%20%C3%B6ffentlichen%20Volksschule&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20der%20%C3%B6ffentlichen%20Volksschule&year=2024) |
+|:--:|
+
+\
+
+
+### Klassengrösse sowie mehrklassige Abteilungen an Primarschulen
+
+```{r 42.15, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Klassengrösse sowie mehrklassige Abteilungen an Primarschulen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.15_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Klassengr%C3%B6sse%20sowie%20mehrklassige%20Abteilungen%20an%20Primarschulen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Klassengr%C3%B6sse%20sowie%20mehrklassige%20Abteilungen%20an%20Primarschulen&year=2024) |
+|:--:|
+
+\newpage
+
+
+### Schülerinnen und Schüler nach Schuljahren
+
+```{r 42.16, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler nach Schuljahren"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.16_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20nach%20Schuljahren&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20nach%20Schuljahren&year=2024) |
+|:--:|
+
+\
+
+
+### Thurgauer Schülerinnen und Schüler an der Kantonsschule Wil nach Programmjahr
+
+```{r 42.17, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Thurgauer Schülerinnen und Schüler an der Kantonsschule Wil nach Programmjahr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.17_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Thurgauer%20Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20der%20Kantonsschule%20Wil%20nach%20Programmjahr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Thurgauer%20Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20der%20Kantonsschule%20Wil%20nach%20Programmjahr&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler spezieller Lehrgänge nach Programmjahr
+
+```{r 42.18, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler spezieller Lehrgänge nach Programmjahr"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.18_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20spezieller%20Lehrg%C3%A4nge%20nach%20Programmjahr&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20spezieller%20Lehrg%C3%A4nge%20nach%20Programmjahr&year=2024) |
+|:--:|
+
+\
+
+
+### Mittelschulabschlüsse
+
+```{r 42.19, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Mittelschulabschlüsse"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.19_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Mittelschulabschl%C3%BCsse&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Mittelschulabschl%C3%BCsse&year=2024) |
+|:--:|
+
+\
+
+
+### Lehrverträge nach Ausbildungsfeldern
+
+```{r 42.110, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Lehrverträge nach Ausbildungsfeldern"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.110_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Lehrvertr%C3%A4ge%20nach%20Ausbildungsfeldern&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Lehrvertr%C3%A4ge%20nach%20Ausbildungsfeldern&year=2024) |
+|:--:|
+
+\
+
+
+### Qualifikationsverfahren (Lehrabschlussprüfungen) nach Ausbildungsfeldern
+
+```{r 42.111, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Qualifikationsverfahren (Lehrabschlussprüfungen) nach Ausbildungsfeldern"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.111_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Qualifikationsverfahren%20(Lehrabschlusspr%C3%BCfungen)%20nach%20Ausbildungsfeldern&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Qualifikationsverfahren%20(Lehrabschlusspr%C3%BCfungen)%20nach%20Ausbildungsfeldern&year=2024) |
+|:--:|
+
+\
+
+
+### Entwicklung der Lehrlingszahlen
+
+```{r 42.112, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Entwicklung der Lehrlingszahlen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.112_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Entwicklung%20der%20Lehrlingszahlen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Entwicklung%20der%20Lehrlingszahlen&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler in Thurgauer Brückenangeboten (öffentlich und privat)
+
+```{r 42.113, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler in Thurgauer Brückenangeboten (öffentlich und privat)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.113_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Thurgauer%20Br%C3%BCckenangeboten%20(%C3%B6ffentlich%20und%20privat)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Thurgauer%20Br%C3%BCckenangeboten%20(%C3%B6ffentlich%20und%20privat)&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler in Integrationskursen
+
+```{r 42.114, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler in Integrationskursen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.114_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Integrationskursen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20Integrationskursen&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler an Berufsfachschulen nach Ausbildungsfeldern
+
+```{r 42.115, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler an Berufsfachschulen nach Ausbildungsfeldern"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.115_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20Berufsfachschulen%20nach%20Ausbildungsfeldern&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20an%20Berufsfachschulen%20nach%20Ausbildungsfeldern&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerzahlen Berufsmaturität
+
+```{r 42.116, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerzahlen Berufsmaturität"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.116_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerzahlen%20Berufsmaturit%C3%A4t&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerzahlen%20Berufsmaturit%C3%A4t&year=2024) |
+|:--:|
+
+\
+
+
+### Schülerinnen und Schüler in einer Ausbildung zur Berufsmaturität BM1 nach Berufsfachschule
+
+```{r 42.117, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Schülerinnen und Schüler in einer Ausbildung zur Berufsmaturität BM1 nach Berufsfachschule"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.117_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20einer%20Ausbildung%20zur%20Berufsmaturit%C3%A4t%20BM1%20nach%20Berufsfachschule&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Sch%C3%BClerinnen%20und%20Sch%C3%BCler%20in%20einer%20Ausbildung%20zur%20Berufsmaturit%C3%A4t%20BM1%20nach%20Berufsfachschule&year=2024) |
+|:--:|
+
+\
+
+
+### Abschlüsse Berufsmaturität
+
+```{r 42.118, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kinder und Jugendliche in Ausbildung"]][["Abschlüsse Berufsmaturität"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.118_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Abschl%C3%BCsse%20Berufsmaturit%C3%A4t&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kinder%20und%20Jugendliche%20in%20Ausbildung&table=Abschl%C3%BCsse%20Berufsmaturit%C3%A4t&year=2024) |
+|:--:|
+
+\
+
+
+## 2.2&emsp;Lehrpersonen
+
+### Lehrpersonen an der Volksschule und am Kindergarten (inkl. Teilpensen)
+
+```{r 42.21, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Lehrpersonen"]][["Lehrpersonen an der Volksschule und am Kindergarten (inkl. Teilpensen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.21_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20der%20Volksschule%20und%20am%20Kindergarten%20(inkl.%20Teilpensen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20der%20Volksschule%20und%20am%20Kindergarten%20(inkl.%20Teilpensen)&year=2024) |
+|:--:|
+
+\
+
+
+### Lehrpersonen an den Mittelschulen (inkl. Teilpensen)
+
+```{r 42.22, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Lehrpersonen"]][["Lehrpersonen an den Mittelschulen (inkl. Teilpensen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.22_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Mittelschulen%20(inkl.%20Teilpensen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Mittelschulen%20(inkl.%20Teilpensen)&year=2024) |
+|:--:|
+
+\
+
+
+### Lehrpersonen an den Berufsfachschulen (inkl. Teilpensen)
+
+```{r 42.23, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Lehrpersonen"]][["Lehrpersonen an den Berufsfachschulen (inkl. Teilpensen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.23_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Berufsfachschulen%20(inkl.%20Teilpensen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Berufsfachschulen%20(inkl.%20Teilpensen)&year=2024) |
+|:--:|
+
+\
+
+
+### Lehrpersonen an den Brückenangeboten (inkl. Teilpensen)
+
+```{r 42.24, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Lehrpersonen"]][["Lehrpersonen an den Brückenangeboten (inkl. Teilpensen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.24_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Br%C3%BCckenangeboten%20(inkl.%20Teilpensen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Lehrpersonen&table=Lehrpersonen%20an%20den%20Br%C3%BCckenangeboten%20(inkl.%20Teilpensen)&year=2024) |
+|:--:|
+
+\
+
+
+## 2.3&emsp;Weiterbildung
+
+### Berufsorientierte und allgemeine Weiterbildung
+
+```{r 42.31, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Weiterbildung"]][["Berufsorientierte und allgemeine Weiterbildung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.31_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Weiterbildung&table=Berufsorientierte%20und%20allgemeine%20Weiterbildung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Weiterbildung&table=Berufsorientierte%20und%20allgemeine%20Weiterbildung&year=2024) |
+|:--:|
+
+\
+
+
+## 2.4&emsp;Berufs- und Studienberatung
+
+### Information
+
+```{r 42.41, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Berufs- und Studienberatung"]][["Information"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.41_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Information&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Information&year=2024) |
+|:--:|
+
+\
+
+
+### Veranstaltungen und Kurse
+
+```{r 42.42, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Berufs- und Studienberatung"]][["Veranstaltungen und Kurse"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.42_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Veranstaltungen%20und%20Kurse&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Veranstaltungen%20und%20Kurse&year=2024) |
+|:--:|
+
+\
+
+
+### Beratungen
+
+```{r 42.43, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Berufs- und Studienberatung"]][["Beratungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.43_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Beratungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Beratungen&year=2024) |
+|:--:|
+
+\
+
+
+### Andere Dienstleistungen
+
+```{r 42.44, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Berufs- und Studienberatung"]][["Andere Dienstleistungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.44_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Andere%20Dienstleistungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Berufs-%20und%20Studienberatung&table=Andere%20Dienstleistungen&year=2024) |
+|:--:|
+
+\
+
+
+## 2.5&emsp;Jugendmusikschulen
+
+### Kantonale und ausserkantonale Jugendmusikschulen
+
+```{r 42.51, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Jugendmusikschulen"]][["Kantonale und ausserkantonale Jugendmusikschulen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 42.51_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Jugendmusikschulen&table=Kantonale%20und%20ausserkantonale%20Jugendmusikschulen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Jugendmusikschulen&table=Kantonale%20und%20ausserkantonale%20Jugendmusikschulen&year=2024) |
+|:--:|
+
+\
+
+
+## 3&emsp;Sport
+
+### Lehrpersonenweiterbildung
+
+```{r 431, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["Lehrpersonenweiterbildung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 431_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Lehrpersonenweiterbildung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Lehrpersonenweiterbildung&year=2024) |
+|:--:|
+
+\
+
+
+### Leistungsmessung vor Ende der Schulpflicht (Empfehlung Kanton)
+
+```{r 432, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["Leistungsmessung vor Ende der Schulpflicht (Empfehlung Kanton)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 432_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Leistungsmessung%20vor%20Ende%20der%20Schulpflicht%20(Empfehlung%20Kanton)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Leistungsmessung%20vor%20Ende%20der%20Schulpflicht%20(Empfehlung%20Kanton)&year=2024) |
+|:--:|
+
+\
+
+
+### J+S-Schulsport (Kurse und Lager an Schulen)
+
+```{r 433, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["J+S-Schulsport (Kurse und Lager an Schulen)"]], year = "2024")
+ft_df$ft
+```
+
+```{r 433_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=J+S-Schulsport%20(Kurse%20und%20Lager%20an%20Schulen)&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=J+S-Schulsport%20(Kurse%20und%20Lager%20an%20Schulen)&year=2024) |
+|:--:|
+
+\
+
+
+### J+S-Vereinssport
+
+```{r 434, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["J+S-Vereinssport"]], year = "2024")
+ft_df$ft
+```
+
+```{r 434_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=J+S-Vereinssport&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=J+S-Vereinssport&year=2024) |
+|:--:|
+
+\
+
+
+### Kantonale Jugendsportcamps
+
+```{r 435, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["Kantonale Jugendsportcamps"]], year = "2024")
+ft_df$ft
+```
+
+```{r 435_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Kantonale%20Jugendsportcamps&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Kantonale%20Jugendsportcamps&year=2024) |
+|:--:|
+
+\
+
+
+### Sportfonds-Beiträge
+
+```{r 436, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Sport"]][["Sportfonds-Beiträge"]], year = "2024")
+ft_df$ft
+```
+
+```{r 436_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Sportfonds-Beitr%C3%A4ge&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Sport&table=Sportfonds-Beitr%C3%A4ge&year=2024) |
+|:--:|
+
+\
+
+
+## 4.1&emsp;Kantonsbibliothek
+
+### Bestand
+
+```{r 44.11, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kantonsbibliothek"]][["Bestand"]], year = "2024")
+ft_df$ft
+```
+
+```{r 44.11_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kantonsbibliothek&table=Bestand&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kantonsbibliothek&table=Bestand&year=2024) |
+|:--:|
+
+\
+
+
+### Nutzung
+
+```{r 44.12, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Kantonsbibliothek"]][["Nutzung"]], year = "2024")
+ft_df$ft
+```
+
+```{r 44.12_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kantonsbibliothek&table=Nutzung&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Kantonsbibliothek&table=Nutzung&year=2024) |
+|:--:|
+
+\
+
+
+## 4.2&emsp;Amt für Archäologie
+
+### Laufende und abgeschlossene Grabungen, Begleitungen, Bauuntersuchungen, Restaurierungen und Probenentnahmen für Dendrochronologie
+
+```{r 44.21, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Amt für Archäologie"]][["Laufende und abgeschlossene Grabungen, Begleitungen, Bauuntersuchungen, Restaurierungen und Probenentnahmen für Dendrochronologie"]], year = "2024")
+ft_df$ft
+```
+
+```{r 44.21_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Amt%20f%C3%BCr%20Arch%C3%A4ologie&table=Laufende%20und%20abgeschlossene%20Grabungen,%20Begleitungen,%20Bauuntersuchungen,%20Restaurierungen%20und%20Probenentnahmen%20f%C3%BCr%20Dendrochronologie&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Amt%20f%C3%BCr%20Arch%C3%A4ologie&table=Laufende%20und%20abgeschlossene%20Grabungen,%20Begleitungen,%20Bauuntersuchungen,%20Restaurierungen%20und%20Probenentnahmen%20f%C3%BCr%20Dendrochronologie&year=2024) |
+|:--:|
+
+\
+
+
+### Einzelne Funde aus Prospektionen und Lieferungen
+
+```{r 44.22, ft.align='left'}
+ft_df <- produce_flextable(elem = nested_data_ogd[["DEK"]][["Amt für Archäologie"]][["Einzelne Funde aus Prospektionen und Lieferungen"]], year = "2024")
+ft_df$ft
+```
+
+```{r 44.22_qr,fig.width=42,fig.align='right'}
+qr <- qrcode::qr_code("https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Amt%20f%C3%BCr%20Arch%C3%A4ologie&table=Einzelne%20Funde%20aus%20Prospektionen%20und%20Lieferungen&year=2024")
+plot(qr)
+```
+| [Zur Tabelle](https://statistiktg.shinyapps.io/statanhang/?dept=DEK&amt=Amt%20f%C3%BCr%20Arch%C3%A4ologie&table=Einzelne%20Funde%20aus%20Prospektionen%20und%20Lieferungen&year=2024) |
+|:--:|
+
+\
+

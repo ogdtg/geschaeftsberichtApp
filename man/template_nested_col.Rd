@@ -6,27 +6,29 @@
 \usage{
 template_nested_col(
   data,
-  level1_col,
-  level2_col,
-  colnames_col,
+  group_col,
+  label_col,
   val_col,
   year_col = "jahr",
-  level1_name = NULL,
-  level2_name = NULL
+  num_years,
+  colnames_col,
+  no_subtotals = F,
+  new_names,
+  subtotals_in_data = NULL
 )
 }
 \arguments{
 \item{data}{A data frame.}
 
-\item{level1_col}{Higher-level grouping column.}
-
-\item{level2_col}{Sub-level column.}
-
-\item{colnames_col}{Column containing variable names.}
-
 \item{val_col}{Value column.}
 
 \item{year_col}{Year column (default is `"jahr"`).}
+
+\item{colnames_col}{Column containing variable names.}
+
+\item{level1_col}{Higher-level grouping column.}
+
+\item{level2_col}{Sub-level column.}
 
 \item{level1_name}{Optional name override for `level1_col`.}
 

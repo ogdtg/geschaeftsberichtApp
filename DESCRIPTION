@@ -1,5 +1,5 @@
 Package: geschaeftsberichtApp
-Title: geschaeftsberichtApp
+Title: Digitaler Geschäftsbericht KVTG
 Version: 0.0.0.9000
 Authors@R: 
     person("Felix", "Lorenz", , "felix.lorenz@tg.ch", role = c("cre", "aut"))
